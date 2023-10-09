@@ -21,7 +21,6 @@ export default function Mocpart({ params, host }: { params: URLSearchParams, hos
         alignItems: 'center',
         width: '1100px',
         height: '100px',
-        // border: '1px solid red',
       }}>
         <div style={{
           textAlign: 'center',
