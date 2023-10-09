@@ -20,8 +20,8 @@ export async function GET(request) {
   return new ImageResponse(
     <Component params={searchParams} host={host} />,
     {
-      width: 1200,
-      height: 1200,
+      width: 800,
+      height: 800,
     },
   );
 }
