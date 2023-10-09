@@ -1,4 +1,3 @@
-// import { ImageResponse } from '@cloudflare/pages-plugin-vercel-og/api';
 import { ImageResponse } from 'next/server';
 import Mocpart from './brickscompare/Mocpart';
 
