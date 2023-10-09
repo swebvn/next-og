@@ -1,4 +1,4 @@
-export default function Mocpart({ params, host }: { params: URLSearchParams, host: string }) {
+export default function Mocpart({ params, host }) {
   const productName = params.get('product_name')
   const image = params.get('image')?.toString()
 
