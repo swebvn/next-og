@@ -1,6 +1,6 @@
 export default function Mocpart({ params, host }: { params: URLSearchParams, host: string }) {
   const productName = params.get('product_name')
-  const image = params.get('image')
+  const image = params.get('image')?.toString()
 
   return (
     <div tw="flex w-full h-full items-center justify-center">

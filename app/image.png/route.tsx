@@ -1,10 +1,12 @@
-import { ImageResponse } from '@cloudflare/pages-plugin-vercel-og/api';
+// import { ImageResponse } from '@cloudflare/pages-plugin-vercel-og/api';
+import { ImageResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 // import { ImageResponse } from 'next/server';
 import Mocpart from './brickscompare/Mocpart';
 
 export const runtime = 'edge';
 
-export async function GET(request: Request) {
+export async function GET(request: NextRequest) {
   const {searchParams, host} = new URL(request.url);
   const template = searchParams.get('template');
 
