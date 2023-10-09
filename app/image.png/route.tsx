@@ -1,4 +1,4 @@
-import { ImageResponse } from 'next/server';
+import { ImageResponse } from '@cloudflare/pages-plugin-vercel-og/api';
 import Mocpart from './brickscompare/Mocpart';
 
 export const runtime = 'edge';
