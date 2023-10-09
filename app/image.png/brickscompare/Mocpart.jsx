@@ -1,9 +1,6 @@
-export default async function Mocpart({ params, host }) {
+export default function Mocpart({ params, host }) {
   const productName = params.get('product_name')
-
-
-  console.log('image', image)
-
+  const image = params.get('image')?.toString()
 
   return (
     <div tw="flex w-full h-full items-center justify-center">
