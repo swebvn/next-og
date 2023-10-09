@@ -3,50 +3,15 @@ export default function Mocpart({ params, host }: { params: URLSearchParams, hos
   const image = params.get('image')
 
   return (
-    <div style={{
-      width: '100%',
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-    }}>
-      {/* background */}
-      <img src={`http://${host}/brickscompare/moc-part-bg.png`} style={{ position: 'absolute', width: '100%', height: '100%' }} />
+    <div tw="flex w-full h-full items-center justify-center">
+      <img src={`http://${host}/brickscompare/moc-part-bg.png`} tw="absolute w-full h-full" />
 
-      {/* product image */}
-      <div style={{
-        position: 'absolute',
-        top: '100px',
-        left: '200px',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '800px',
-        height: '800px',
-        border: '1px solid black',
-      }}>
-        <img src={image} style={{ width: '100%', height: '100%' }} />
+      <div tw="absolute top-[100px] px-[200px] w-full flex flex-col items-center justify-center h-[800px]">
+        <img src={image} tw="w-full h-full" />
       </div>
 
-      {/* product name */}
-      <div style={{
-        position: 'absolute',
-        top: '980px',
-        left: '50px',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '1100px',
-        height: '100px',
-      }}>
-        <div style={{
-          textAlign: 'center',
-          fontSize: '32px',
-          wordBreak: 'break-all',
-        }}>{productName}</div>
+      <div tw="absolute top-[980px] px-[50px] w-full flex flex-col items-center justify-center h-[100px]">
+        <div tw="text-center text-4xl">{productName}</div>
       </div>
     </div>
   )
