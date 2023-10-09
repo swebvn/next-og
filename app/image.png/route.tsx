@@ -1,32 +1,27 @@
 import { ImageResponse } from 'next/server';
+import Mocpart from './brickscompare/Mocpart';
 
 export const runtime = 'edge';
 
-export async function GET() {
+export async function GET(request: Request) {
+  const {searchParams} = new URL(request.url);
+  const template = searchParams.get('template');
+
+  let Component = null;
+
+  if (template === 'brickscompare:moc-part') {
+    Component = Mocpart
+  } else {
+    // 404
+    return new Response('Template not found', { status: 404 });
+  }
+
+
   return new ImageResponse(
-    (
-      <div
-        style={{
-          fontSize: 100,
-          color: 'black',
-          background: 'white',
-          width: '100%',
-          height: '100%',
-          padding: '50px 200px',
-          textAlign: 'center',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        👋, 🌎
-      </div>
-    ),
+    <Component params={searchParams} />,
     {
       width: 1200,
-      height: 630,
-      // Supported options: 'twemoji', 'blobmoji', 'noto', 'openmoji', 'fluent' and 'fluentFlat'
-      // Default to 'twemoji'
-      emoji: 'twemoji',
+      height: 1200,
     },
   );
 }
