@@ -11,16 +11,9 @@ export async function GET(request) {
 
   if (template === 'brickscompare:moc-part') {
     Component = Mocpart
-  } else {
-    // 404
-    return new Response('Template not found', { status: 404 });
   }
 
-  return new ImageResponse(
-    <Component params={searchParams} host={host} />,
-    {
-      width: 800,
-      height: 800,
-    },
-  );
+  return Component
+    ? new ImageResponse(<Component params={searchParams} host={host} />, { width: 800, height: 800 })
+    : new Response('Template not found', { status: 404 });
 }
