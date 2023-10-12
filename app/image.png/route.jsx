@@ -14,6 +14,6 @@ export async function GET(request) {
   }
 
   return Component
-    ? new ImageResponse(<Component params={searchParams} host={host} />, { width: 800, height: 800, debug: true })
+    ? new ImageResponse(<Component params={searchParams} host={host} />, { width: 800, height: 800 })
     : new Response('Template not found', { status: 404 });
 }
