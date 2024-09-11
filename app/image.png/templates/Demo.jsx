@@ -5,8 +5,6 @@ export default function Demo({ params }) {
     const image = params.get('image')
     const logo = removeBackgroundUrl(params.get('image1'));
 
-    console.log({logo})
-
     return (
         <div tw="flex w-full h-full items-center justify-center">
 
