@@ -11,7 +11,11 @@ export default function Demo({ params, host }) {
             </div>
 
             <div tw="flex">
-                <img src={image1} alt="" tw="transform rotate-[45] w-[200px] h-[200px]" />
+                <img src={image1} alt="" style={{
+                    width: '200px',
+                    height: '200px',
+                    transform: 'rotate(69deg)',
+                }} />
             </div>
 
             <h1 tw="text-center absolute top-[20px] text-red-500 text-[69px] font-bold">{title}</h1>
