@@ -6,7 +6,7 @@ export default function Demo({ params, host }) {
     return (
         <div tw="flex w-full h-full items-center justify-center">
 
-            <div tw="absolute top-[25px] px-[90px] w-full flex flex-col items-center justify-center h-[600px]">
+            <div tw="absolute w-full h-full object-cover flex flex-col items-center justify-center">
                 <img src={image} tw="w-full h-full" />
             </div>
 
