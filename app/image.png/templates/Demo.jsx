@@ -1,4 +1,4 @@
-export default function Demo({ params, host }) {
+export default function Demo({ params }) {
     const title = params.get('title') || 'Title'
     const image = params.get('image')
     const image1 = params.get('image1')
