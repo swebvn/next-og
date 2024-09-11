@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/server';
-import Mocpart from './brickscompare/Mocpart';
+import Demo from './templates/Demo';
 
 export const runtime = 'edge';
 
@@ -9,11 +9,9 @@ export async function GET(request) {
 
   let Component = null;
 
-  if (template === 'brickscompare:moc-part') {
-    Component = Mocpart
+  if (template === 'demo') {
+    return new ImageResponse(<Demo params={searchParams} host={host} />, { width: 800, height: 600 });
   }
 
-  return Component
-    ? new ImageResponse(<Component params={searchParams} host={host} />, { width: 800, height: 800 })
-    : new Response('Template not found', { status: 404 });
+  return new Response('Template not found', { status: 404 });
 }
