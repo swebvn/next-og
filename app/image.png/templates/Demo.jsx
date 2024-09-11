@@ -1,7 +1,11 @@
+import { removeBackgroundUrl } from '../../supports';
+
 export default function Demo({ params }) {
     const title = params.get('title') || 'Title'
     const image = params.get('image')
-    const image1 = params.get('image1')
+    const logo = removeBackgroundUrl(params.get('image1'));
+
+    console.log({logo})
 
     return (
         <div tw="flex w-full h-full items-center justify-center">
@@ -10,13 +14,15 @@ export default function Demo({ params }) {
                 <img src={image} tw="w-full h-full" />
             </div>
 
-            <div tw="flex">
-                <img src={image1} alt="" style={{
-                    width: '200px',
-                    height: '200px',
-                    transform: 'rotate(69deg)',
-                }} />
-            </div>
+            <img src={logo} alt="" style={{
+                position: 'absolute',
+                top: '50px',
+                left: '50px',
+                width: '100px',
+                height: '100px',
+                transform: 'rotate(30deg)',
+                borderRadius: '50%',
+            }} />
 
             <h1 tw="text-center absolute top-[20px] text-red-500 text-[69px] font-bold">{title}</h1>
         </div>
