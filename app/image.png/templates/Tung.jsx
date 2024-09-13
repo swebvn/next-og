@@ -2,8 +2,8 @@ export default function Demo({ params }) {
     const bg_image = params.get('bg_image')
     const image_charm = params.get('image_charm')
     const image_bg_charm = params.get('image_bg_charm')
-    const title1 = params.get('title1') || 'Blank title'
-    const title2 = params.get('title2') || 'Blank title'
+    const title1 = params.get('title1') || "Billy Even's"
+    const title2 = params.get('title2') || 'FIRST CHRISTMAS'
     const product_image1 = params.get('product_image1')
     const product_image2 = params.get('product_image2')
     const product_image3 = params.get('product_image3')
