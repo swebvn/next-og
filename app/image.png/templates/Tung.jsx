@@ -42,7 +42,7 @@ export default function Demo({ params }) {
             <img src={product_image1} alt="" style={{
                 position: 'absolute',
                 top: '595px',
-                left: '340px',
+                left: '360px',
                 width: '211px',
                 height: '213px',
                 transform: 'rotate(38.62deg)',
@@ -50,8 +50,8 @@ export default function Demo({ params }) {
 
             <img src={product_image2} alt="" style={{
                 position: 'absolute',
-                top: '552px',
-                left: '463px',
+                top: '540px',
+                left: '480px',
                 width: '211px',
                 height: '212px',
                 transform: 'rotate(18.7deg)',
@@ -122,7 +122,7 @@ export default function Demo({ params }) {
             }} />       
             <img src={product_image11} alt="" style={{
                 position: 'absolute',
-                top: '690px',
+                top: '705px',
                 left: '730px',
                 width: '211px', 
                 height: '212px',
