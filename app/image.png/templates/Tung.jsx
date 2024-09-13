@@ -1,6 +1,7 @@
 export default function Demo({ params }) {
     const bg_image = params.get('bg_image')
     const image_charm = params.get('image_charm')
+    const image_bg_charm = params.get('image_bg_charm')
     const title1 = params.get('title1') || 'Blank title'
     const title2 = params.get('title2') || 'Blank title'
     const product_image1 = params.get('product_image1')
@@ -14,7 +15,6 @@ export default function Demo({ params }) {
     const product_image9 = params.get('product_image9')
     const product_image10 = params.get('product_image10')
     const product_image11 = params.get('product_image11')
-    const product_image12 = params.get('product_image12')
     return (
         <div tw="flex w-full h-full items-center justify-center">
             <div tw="absolute w-full h-full flex flex-col items-center justify-center" >
