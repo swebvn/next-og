@@ -1,9 +1,8 @@
 import { ImageResponse } from 'next/server';
 import Demo from './templates/Demo';
 import Tung from './templates/Tung';
-
+import Charm from './templates/charm';
 export const runtime = 'edge';
-
 export async function GET(request) {
   const { searchParams, host } = new URL(request.url);
   const template = searchParams.get('template');
@@ -20,8 +19,20 @@ export async function GET(request) {
 
   if (template === 'tung') {
     return new ImageResponse(<Tung params={searchParams} />, {
-      width: 800,
-      height: 600,
+      width: 1500,
+      height: 1500,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam,
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'charm') {
+    return new ImageResponse(<Charm params={searchParams} />, {
+      width: 1500,
+      height: 1500,
       fonts: [{
         name: "BeVietnamPro",
         data: fontBeVietnam,
