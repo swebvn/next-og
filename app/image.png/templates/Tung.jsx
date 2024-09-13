@@ -42,43 +42,43 @@ export default function Demo({ params }) {
             <img src={product_image1} alt="" style={{
                 position: 'absolute',
                 top: '595px',
-                left: '440px',
+                left: '307px',
                 width: '211px',
                 height: '213px',
-                transform: 'rotate(-38.62deg)',
+                transform: 'rotate(38.62deg)',
             }} />
 
             <img src={product_image2} alt="" style={{
                 position: 'absolute',
                 top: '552px',
-                left: '531px',
+                left: '463px',
                 width: '211px',
                 height: '212px',
-                transform: 'rotate(-18.7deg)',
+                transform: 'rotate(18.7deg)',
             }} />
              <img src={product_image3} alt="" style={{
                 position: 'absolute',
-                top: '545px',
-                left: '1007px',
+                top: '470px',
+                left: '736px',
                 width: '209px',
                 height: '210px',
-                transform: 'rotate(-111deg)',
+                transform: 'rotate(111deg)',
             }} />     
             <img src={product_image4} alt="" style={{
                 position: 'absolute',
-                top: '630px',
+                top: '597px',
                 left: '903px',
                 width: '219px',
                 height: '220px',
-                transform: 'rotate(8.5deg)',
+                transform: 'rotate(-8.5deg)',
             }} />       
             <img src={product_image5} alt="" style={{
                 position: 'absolute',
-                top: '757px',
+                top: '685px',
                 left: '508px',
                 width: '207px',
                 height: '208px',
-                transform: 'rotate(21deg)',
+                transform: 'rotate(-21deg)',
             }} />       
             <img src={product_image6} alt="" style={{
                 position: 'absolute',
@@ -91,10 +91,10 @@ export default function Demo({ params }) {
             <img src={product_image7} alt="" style={{
                 position: 'absolute',
                 top: '801px',
-                left: '537px',
+                left: '380px',
                 width: '202px',
                 height: '203px',
-                transform: 'rotate(-51deg)',
+                transform: 'rotate(51deg)',
             }} />       
             <img src={product_image8} alt="" style={{
                 position: 'absolute',
@@ -106,41 +106,39 @@ export default function Demo({ params }) {
             }} />       
             <img src={product_image9} alt="" style={{
                 position: 'absolute',
-                top: '997pxx',
-                left: '945px',
+                top: '819pxx',
+                left: '672px',
                 width: '201px',
                 height: '202px',
-                transform: 'rotate(-152deg)',
+                transform: 'rotate(152deg)',
             }} />       
             <img src={product_image10} alt="" style={{
                 position: 'absolute',
                 top: '818px',
-                left: '870px',
+                left: '836px',
                 width: '211px',
                 height: '212px',
-                transform: 'rotate(-9.5deg)',
+                transform: 'rotate(9.5deg)',
             }} />       
             <img src={product_image11} alt="" style={{
                 position: 'absolute',
                 top: '676px',
-                left: '924px',
-                width: '211px',
+                left: '726px',
+                width: '211px', 
                 height: '212px',
-                transform: 'rotate(-69deg)',
+                transform: 'rotate(69deg)',
             }} />                   
 
-            <h1 tw="text-center absolute top-[1103px] left-[597px] text-black-500 text-[60px] font-bold"
+            <h1 tw="text-center absolute top-[1070px] left-[597px] text-black-500 text-[60px] font-bold"
                 style={{
                     fontFamily: 'BeVietnamPro',
-                    color: 'cyan',
-                    fontFamily: 'Arial',
+                    color: '#351501',
                 }}
             >{title1}</h1>
-               <h1 tw="text-center absolute top-[1181px] left-[488px] text-black-500 text-[60px] font-bold"
+               <h1 tw="text-center absolute top-[1150px] left-[488px] text-black-500 text-[60px] font-bold"
                 style={{
                     fontFamily: 'BeVietnamPro',
-                    color: 'cyan',
-                    fontFamily: 'Arial',
+                    color: '#351501',
                 }}
             >{title2}</h1>
         </div>
