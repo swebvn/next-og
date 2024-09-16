@@ -6,7 +6,8 @@
       "args": "start",
       "cwd": "./",
       "instances": "max",
-      "exec_mode": "cluster"
+      "exec_mode": "cluster",
+      "max_memory_restart": "4G"
     }
   ]
 }
