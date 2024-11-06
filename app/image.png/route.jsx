@@ -3,6 +3,7 @@ import Demo from './templates/Demo';
 import Tung from './templates/Tung';
 import Charm from './templates/charm';
 import Duc_template1 from './templates/duc-template1';
+import Duc_template2 from './templates/duc-template2';
 export const runtime = 'edge';
 export async function GET(request) {
   const { searchParams, host } = new URL(request.url);
@@ -44,6 +45,18 @@ export async function GET(request) {
 
   if (template === 'duc-template1') {
     return new ImageResponse(<Duc_template1 params={searchParams} />, {
+      width: 1000, 
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam,
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'duc-template2') {
+    return new ImageResponse(<Duc_template2 params={searchParams} />, {
       width: 1000, 
       height: 1000,
       fonts: [{
