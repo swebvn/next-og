@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/server';
 import Demo from './templates/Demo';
 import Tung from './templates/Tung';
 import Charm from './templates/charm';
-import duc_template1 from './templates/duc-template1';
+import Duc_template1 from './templates/duc-template1';
 export const runtime = 'edge';
 export async function GET(request) {
   const { searchParams, host } = new URL(request.url);
@@ -43,7 +43,7 @@ export async function GET(request) {
   }
 
   if (template === 'duc-template1') {
-    return new ImageResponse(<duc_template1 params={searchParams} />, {
+    return new ImageResponse(<Duc_template1 params={searchParams} />, {
       width: 1000, 
       height: 1000,
       fonts: [{
