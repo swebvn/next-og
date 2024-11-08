@@ -9,7 +9,7 @@ export default function duc_template3({ params }) {
                 left: '150px',
                 width: '730px',
                 height: '560px', 
-                transform: 'skewX(0deg) skewY(10deg) rotate(-16deg)', 
+                transform: 'skewX(0deg) skewY(10deg) rotate(-16deg)',
             }} />
             <div tw="absolute w-full h-full object-cover flex flex-col items-center justify-center">
                 <img src={image_goc3} tw="w-full h-full" />
