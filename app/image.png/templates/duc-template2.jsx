@@ -7,8 +7,8 @@ export default function duc_template1({ params }) {
                 position: 'absolute',
                 top: '275px',
                 left: '145px',
-                width: '720px',
-                height: '465px',  
+                width: '730px',
+                height: '465px',
                 transform: 'skewX(0deg) skewY(5deg) rotate(-11deg)', 
             }} />
             <div tw="absolute w-full h-full object-cover flex flex-col items-center justify-center">
