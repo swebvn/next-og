@@ -14,7 +14,6 @@ export default function duc_template1({ params }) {
             <div tw="absolute w-full h-full object-cover flex flex-col items-center justify-center">
                 <img src={image_goc1} tw="w-full h-full" />
             </div>
- 
         </div>
     )
 }
