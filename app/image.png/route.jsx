@@ -9,7 +9,10 @@ import Duc_template4 from './templates/duc-template4';
 import Duc_template5 from './templates/duc-template5';
 import Duc_template6 from './templates/duc-template6';
 import Duc_template7 from './templates/duc-template7';
+import InsurlinkMarketing from './templates/InsurlinkMarketing';
+
 export const runtime = 'edge';
+
 export async function GET(request) {
   const { searchParams, host } = new URL(request.url);
   const template = searchParams.get('template');
@@ -50,7 +53,7 @@ export async function GET(request) {
 
   if (template === 'duc-template1') {
     return new ImageResponse(<Duc_template1 params={searchParams} />, {
-      width: 1000, 
+      width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
@@ -62,7 +65,7 @@ export async function GET(request) {
 
   if (template === 'duc-template2') {
     return new ImageResponse(<Duc_template2 params={searchParams} />, {
-      width: 1000, 
+      width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
@@ -74,7 +77,7 @@ export async function GET(request) {
 
   if (template === 'duc-template3') {
     return new ImageResponse(<Duc_template3 params={searchParams} />, {
-      width: 1000, 
+      width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
@@ -85,7 +88,7 @@ export async function GET(request) {
   }
   if (template === 'duc-template4') {
     return new ImageResponse(<Duc_template4 params={searchParams} />, {
-      width: 1000, 
+      width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
@@ -96,7 +99,7 @@ export async function GET(request) {
   }
   if (template === 'duc-template5') {
     return new ImageResponse(<Duc_template5 params={searchParams} />, {
-      width: 1000, 
+      width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
@@ -107,7 +110,7 @@ export async function GET(request) {
   }
   if (template === 'duc-template6') {
     return new ImageResponse(<Duc_template6 params={searchParams} />, {
-      width: 1000, 
+      width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
@@ -118,13 +121,20 @@ export async function GET(request) {
   }
   if (template === 'duc-template7') {
     return new ImageResponse(<Duc_template7 params={searchParams} />, {
-      width: 1000, 
+      width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
         data: fontBeVietnam,
         style: "normal",
       } ]
+    });
+  }
+
+  if (template === 'il-mkt') {
+    return new ImageResponse(<InsurlinkMarketing params={searchParams} />, {
+      width: 500,
+      height: 500,
     });
   }
 
