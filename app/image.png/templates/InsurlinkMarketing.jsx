@@ -2,7 +2,7 @@ export default function InsurlinkMarketing({ params }) {
     const background = params.get('bg') || 'https://bomfy.customedge.co/storage/media/f8bab50a-179f-41d8-b877-29d00780ff0b.jpg'
     const name = params.get('name')
     const phone = params.get('phone')
-    const avatar = params.get('avatar') || 'https://bomfy.customedge.co/storage/media/50030921-28bd-45d2-9a4f-c30252188819.png'
+    const avatar = params.get('avatar')
     const left = '125px';
 
     return (
@@ -12,14 +12,18 @@ export default function InsurlinkMarketing({ params }) {
                 <img src={background} tw="w-full h-full" />
             </div>
 
-            <img src={avatar} alt="" style={{
-                width: '78px',
-                height: '78px',
-                top: '407px',
-                left: '16px',
-                borderRadius: '100%',
-                position: 'absolute',
-            }} />
+
+            {avatar ?
+                <img src={avatar} alt="" style={{
+                    width: '78px',
+                    height: '78px',
+                    top: '407px',
+                    left: '16px',
+                    borderRadius: '100%',
+                    position: 'absolute',
+                }} />
+                : null
+            }
 
             <div tw="font-bold" style={{
                 position: 'absolute',
