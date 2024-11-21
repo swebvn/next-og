@@ -27,7 +27,7 @@ export default function InsurlinkMarketing({ params }) {
 
             <div tw="font-bold" style={{
                 position: 'absolute',
-                top: '445px',
+                top: '450px',
                 left: left,
                 fontWeight: 900,
                 fontSize: '16px',
@@ -35,7 +35,7 @@ export default function InsurlinkMarketing({ params }) {
             }}>{name}</div>
             <div style={{
                 position: 'absolute',
-                top: '465px',
+                top: '466px',
                 left: left,
                 fontSize: '14px',
             }}>{phone}</div>
