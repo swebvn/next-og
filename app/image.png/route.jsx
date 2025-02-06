@@ -10,6 +10,7 @@ import Duc_template5 from './templates/duc-template5';
 import Duc_template6 from './templates/duc-template6';
 import Duc_template7 from './templates/duc-template7';
 import InsurlinkMarketing from './templates/InsurlinkMarketing';
+import LunarCollection from './templates/LunarCollection';
 
 export const runtime = 'edge';
 
@@ -21,7 +22,12 @@ export async function GET(request) {
     new URL('../../assets/fonts/BeVietnamPro-Medium.woff', import.meta.url)
   ).then(res => res.arrayBuffer());
 
-  let Component = null;
+  if (template === 'lunar-collection') {
+    return new ImageResponse(<LunarCollection params={searchParams} />, {
+        width: 300,
+        height: 300,
+    });
+  }
 
   if (template === 'demo') {
     return new ImageResponse(<Demo params={searchParams} />, { width: 800, height: 600 });
