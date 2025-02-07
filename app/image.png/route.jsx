@@ -147,8 +147,8 @@ export async function GET(request) {
 
   if (template === 'mk-auto-mail') {
     return new ImageResponse(<MailcookAutomationMail params={searchParams} />, {
-      width: 800,
-      height: 1000,
+      width: 960,
+      height: 1542,
     });
   }
 
