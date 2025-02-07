@@ -1,5 +1,6 @@
 export default function LunarCollection({ params }) {
     const image = params.get('image') || 'https://remove-bg.customedge.co/lunar-merch.b-cdn.net/ouranhighschoolhostclub.store/media/150/ssrco,mhoodie,mens,fafafa:ca443f4786,front,square_product,x600-bg,f8f8f8.1.jpg';
+    const text = params.get('text') || '';
     const circle = "https://lunar-merch.b-cdn.net/000-assets/circle.png"
 
 
