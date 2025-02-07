@@ -11,6 +11,7 @@ import Duc_template6 from './templates/duc-template6';
 import Duc_template7 from './templates/duc-template7';
 import InsurlinkMarketing from './templates/InsurlinkMarketing';
 import LunarCollection from './templates/LunarCollection';
+import MailcookAutomationMail from './templates/MailcookAutomationMail';
 
 export const runtime = 'edge';
 
@@ -141,6 +142,13 @@ export async function GET(request) {
     return new ImageResponse(<InsurlinkMarketing params={searchParams} />, {
       width: 500,
       height: 500,
+    });
+  }
+
+  if (template === 'mk-auto-mail') {
+    return new ImageResponse(<MailcookAutomationMail params={searchParams} />, {
+      width: 800,
+      height: 1000,
     });
   }
 
