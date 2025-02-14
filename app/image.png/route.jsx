@@ -11,6 +11,7 @@ import Duc_template6 from './templates/duc-template6';
 import Duc_template7 from './templates/duc-template7';
 import InsurlinkMarketing from './templates/InsurlinkMarketing';
 import LunarCollection from './templates/LunarCollection';
+import LunarLogo from './templates/LunarLogo';
 import MailcookAutomationMail from './templates/MailcookAutomationMail';
 
 export const runtime = 'edge';
@@ -22,6 +23,13 @@ export async function GET(request) {
   const fontBeVietnam = await fetch(
     new URL('../../assets/fonts/BeVietnamPro-Medium.woff', import.meta.url)
   ).then(res => res.arrayBuffer());
+
+  if (template === 'lunar-logo') {
+    return new ImageResponse(<LunarLogo params={searchParams} />, {
+      width: 500,
+      height: 200,
+    });
+  }
 
   if (template === 'lunar-collection') {
     return new ImageResponse(<LunarCollection params={searchParams} />, {
