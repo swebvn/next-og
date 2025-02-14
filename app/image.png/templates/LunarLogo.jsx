@@ -1,5 +1,5 @@
 export default function LunarLogo({params}) {
-    const keyword = params.get('text') || 'Saber Marionette';
+    const keyword = params.get('text') || 'The Lucommerce';
 
     const layoutVariants = ['default', 'vertical', 'circular', 'diagonal'];
     const variant = params.get('variant') || layoutVariants[Math.floor(Math.random() * layoutVariants.length)];
