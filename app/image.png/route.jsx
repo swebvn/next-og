@@ -16,18 +16,37 @@ import MailcookAutomationMail from './templates/MailcookAutomationMail';
 
 export const runtime = 'edge';
 
+async function loadGoogleFont (font, text) {
+  const url = `https://fonts.googleapis.com/css2?family=${font}&text=${encodeURIComponent(text)}`
+  const css = await (await fetch(url)).text()
+  const resource = css.match(/src: url\((.+)\) format\('(opentype|truetype)'\)/)
+
+  if (resource) {
+    const response = await fetch(resource[1])
+    if (response.status == 200) {
+      return await response.arrayBuffer()
+    }
+  }
+
+  throw new Error('failed to load font data')
+}
+
 export async function GET(request) {
   const { searchParams, host } = new URL(request.url);
   const template = searchParams.get('template');
-
-  const fontBeVietnam = await fetch(
-    new URL('../../assets/fonts/BeVietnamPro-Medium.woff', import.meta.url)
-  ).then(res => res.arrayBuffer());
 
   if (template === 'lunar-logo') {
     return new ImageResponse(<LunarLogo params={searchParams} />, {
       width: 500,
       height: 200,
+      fonts: [
+        {
+          name: 'Outfit',
+          data: await loadGoogleFont('Outfit', 'FANS MERCH'),
+          weight: 500,
+          style: 'normal',
+        }
+      ]
     });
   }
 
@@ -41,6 +60,10 @@ export async function GET(request) {
   if (template === 'demo') {
     return new ImageResponse(<Demo params={searchParams} />, { width: 800, height: 600 });
   }
+
+  const fontBeVietnam = await fetch(
+    new URL('../../assets/fonts/BeVietnamPro-Medium.woff', import.meta.url)
+  ).then(res => res.arrayBuffer());
 
   if (template === 'tung') {
     return new ImageResponse(<Tung params={searchParams} />, {
