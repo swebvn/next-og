@@ -10,9 +10,9 @@ export default function MailcookAutomationMail({ params }) {
                 <img src={background} tw="w-full h-full" />
             </div>
 
-            <div tw="flex flex-col items-center justify-center w-full px-[20%]">
-                {text && <div tw="text-xl">{text}</div>}
-                <div tw="flex items-center justify-center w-full mt-4">{<span tw="mr-2">---</span>}{name && <div tw="text-xl">{name}</div>}{<span tw="ml-2">---</span>} </div>
+            <div tw="flex flex-col items-center justify-center w-full px-[14%] mt-[180px]">
+                {text && <div tw="text-4xl">{text}</div>}
+                <div tw="flex items-center justify-center w-full mt-6">{<span tw="mr-2">-----</span>}{name && <div tw="text-4xl">{name}</div>}{<span tw="ml-2">-----</span>} </div>
             </div>
         </div>
     )
