@@ -64,9 +64,9 @@ export default function LunarLogo({params}) {
             <div tw="text-center text-4xl mb-4" style={titleStyle}>
                 {keyword}
             </div>
-            <div tw="flex gap-12 items-center justify-center">
-                <div tw="relative rotate-[-15deg] text-white font-bold">FANS</div>
-                <div tw="relative rotate-[15deg] text-white font-bold">MERCH</div>
+            <div tw="flex items-center justify-center">
+                <div tw="relative text-white font-bold">FANS</div>
+                <div tw="relative text-white font-bold">MERCH</div>
             </div>
         </div>
     );
@@ -74,7 +74,7 @@ export default function LunarLogo({params}) {
     const DiagonalLayout = () => (
         <div tw="mx-auto flex flex-col items-center text-3xl uppercase max-w-[500px] relative">
             <div
-                tw="text-5xl transform -rotate-12 mb-6"
+                tw="text-5xl mb-6"
                 style={{
                     ...titleStyle,
                     filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.2))'
@@ -82,8 +82,8 @@ export default function LunarLogo({params}) {
             >
                 {keyword}
             </div>
-            <div tw="flex flex-col items-end transform rotate-12 absolute -bottom-4 right-0">
-                <div tw="flex items-center gap-3 p-3" style={{
+            <div tw="flex flex-col items-end transform absolute -bottom-4 right-0">
+                <div tw="flex items-center p-3" style={{
                     background: `linear-gradient(135deg, transparent, ${color}33)`,
                     border: `1px solid ${color}`,
                     borderRadius: '4px'
