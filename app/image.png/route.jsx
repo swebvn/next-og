@@ -13,9 +13,9 @@ import InsurlinkMarketing from './templates/InsurlinkMarketing';
 import LunarCollection from './templates/LunarCollection';
 import LunarLogo from './templates/LunarLogo';
 import MailcookAutomationMail from './templates/MailcookAutomationMail';
-
+import Mockup_lunar1 from './templates/mockup-lunar1';
 export const runtime = 'edge';
-
+ 
 async function loadGoogleFont (font, text) {
   const url = `https://fonts.googleapis.com/css2?family=${font}&text=${encodeURIComponent(text)}`
   const css = await (await fetch(url)).text()
@@ -180,6 +180,18 @@ export async function GET(request) {
     return new ImageResponse(<MailcookAutomationMail params={searchParams} />, {
       width: 1748,
       height: 1240,
+    });
+  }
+
+  if (template === 'mockup-lunar1') { 
+    return new ImageResponse(<Mockup_lunar1 params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam,
+        style: "normal",
+      } ]
     });
   }
 
