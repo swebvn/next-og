@@ -14,6 +14,12 @@ import LunarCollection from './templates/LunarCollection';
 import LunarLogo from './templates/LunarLogo';
 import MailcookAutomationMail from './templates/MailcookAutomationMail';
 import Mockup_lunar1 from './templates/mockup-lunar1';
+import Mockup_hoodie from './templates/mockup-hoodie';
+import Mockup_tanktop_male from './templates/mockup-tanktop-male';
+import Mockup_mousepad_s1 from './templates/mockup-mousepad-s1';
+import Mockup_sweatshirt from './templates/mockup-sweatshirt';
+import Mockup_poster from './templates/mockup-poster';
+
 export const runtime = 'edge';
  
 async function loadGoogleFont (font, text) {
@@ -195,5 +201,65 @@ export async function GET(request) {
     });
   }
 
+  if (template === 'mockup-hoodie') { 
+    return new ImageResponse(<Mockup_hoodie params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam,
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-tanktop-male') { 
+    return new ImageResponse(<Mockup_tanktop_male params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam,
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-mousepad-s1') { 
+    return new ImageResponse(<Mockup_mousepad_s1 params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam,
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-sweatshirt') { 
+    return new ImageResponse(<Mockup_sweatshirt params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam,
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-poster') { 
+    return new ImageResponse(<Mockup_poster params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam,
+        style: "normal",
+      } ]
+    });
+  }
+  
   return new Response('Template not found', { status: 404 });
 }
