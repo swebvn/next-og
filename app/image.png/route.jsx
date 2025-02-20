@@ -19,7 +19,9 @@ import Mockup_tanktop_male from './templates/mockup-tanktop-male';
 import Mockup_mousepad_s1 from './templates/mockup-mousepad-s1';
 import Mockup_sweatshirt from './templates/mockup-sweatshirt';
 import Mockup_poster from './templates/mockup-poster';
-
+import Mockup_bag from './templates/mockup-bag';
+import Mockup_cap from './templates/mockup-cap';
+import Mockup_dress from './templates/mockup-dress';
 export const runtime = 'edge';
  
 async function loadGoogleFont (font, text) {
@@ -251,6 +253,42 @@ export async function GET(request) {
 
   if (template === 'mockup-poster') { 
     return new ImageResponse(<Mockup_poster params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam,
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-bag') { 
+    return new ImageResponse(<Mockup_bag params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam,
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-cap') { 
+    return new ImageResponse(<Mockup_cap params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam,
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-dress') { 
+    return new ImageResponse(<Mockup_dress params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
