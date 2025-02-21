@@ -1,4 +1,4 @@
-export default function Mockup_tanktop_male({ params }) {
+export default function mockup_tanktop_male({ params }) {
     const bg_image = params.get('bg_image')
     const image_1 = params.get('image_1')
     return (

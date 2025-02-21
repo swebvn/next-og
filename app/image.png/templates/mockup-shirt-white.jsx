@@ -1,4 +1,4 @@
-export default function mockup_poster({ params }) {
+export default function mockup_lunar1({ params }) {
     const bg_image = params.get('bg_image')
     const image_1 = params.get('image_1')
     return (
@@ -10,15 +10,15 @@ export default function mockup_poster({ params }) {
             style={{
                 top: '50%',
                 left: '50%',
-                width: '594px',
-                height: '840px',
-                transform: 'translateX(-50.3%) translateY(-49.2%)',
+                width: '250px',
+                height: '200px',
+                transform: 'translateX(-50%) translateY(-100%)',
             }}>
             <img src={image_1} alt="" 
              style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'cover',
+                objectFit: 'contain',
             }}
             />
             </div>

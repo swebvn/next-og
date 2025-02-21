@@ -1,4 +1,4 @@
-export default function Mockup_mousepad_s1({ params }) {
+export default function mockup_mousepad_s1({ params }) {
     const bg_image = params.get('bg_image')
     const image_1 = params.get('image_1')
     return (

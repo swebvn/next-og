@@ -1,4 +1,4 @@
-export default function mockup_poster({ params }) {
+export default function mockup_lunar1({ params }) {
     const bg_image = params.get('bg_image')
     const image_1 = params.get('image_1')
     return (
@@ -8,17 +8,17 @@ export default function mockup_poster({ params }) {
             </div>
             <div tw="absolute flex flex-col items-center justify-center" 
             style={{
-                top: '50%',
+                top: '35%',
                 left: '50%',
-                width: '594px',
-                height: '840px',
-                transform: 'translateX(-50.3%) translateY(-49.2%)',
+                width: '250px',
+                height: '200px',
+                transform: 'translateX(-45%) translateY(-50%)',
             }}>
             <img src={image_1} alt="" 
              style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'cover',
+                objectFit: 'contain',
             }}
             />
             </div>

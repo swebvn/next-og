@@ -1,4 +1,4 @@
-export default function mockup_lunar1({ params }) {
+export default function mockup_hoodie({ params }) {
     const bg_image = params.get('bg_image')
     const image_1 = params.get('image_1')
     return (
