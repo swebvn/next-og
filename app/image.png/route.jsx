@@ -17,11 +17,27 @@ import Mockup_lunar1 from './templates/mockup-lunar1';
 import Mockup_hoodie from './templates/mockup-hoodie';
 import Mockup_tanktop_male from './templates/mockup-tanktop-male';
 import Mockup_mousepad_s1 from './templates/mockup-mousepad-s1';
+import Mockup_mousepad_s2 from './templates/mockup-mousepad-s2';
 import Mockup_sweatshirt from './templates/mockup-sweatshirt';
 import Mockup_poster from './templates/mockup-poster';
 import Mockup_bag from './templates/mockup-bag';
 import Mockup_cap from './templates/mockup-cap';
 import Mockup_dress from './templates/mockup-dress';
+import Mockup_mug from './templates/mockup-mug';
+import Mockup_pillow_white from './templates/mockup-pillow-white';
+import Mockup_hat from './templates/mockup-hat';
+import Mockup_facemask from './templates/mockup-facemask';
+import Mockup_notebook_black from './templates/mockup-notebook-black';
+import Mockup_notebook_white from './templates/mockup-notebook-white';
+import Mockup_phone_case from './templates/mockup-phone-case';
+import Mockup_pillow_cover_black from './templates/mockup-pillow-cover-black';
+import Mockup_pin from './templates/mockup-pin';
+import Mockup_shirt_black from './templates/mockup-shirt-black';
+import Mockup_shirt_white from './templates/mockup-shirt-white';
+import Mockup_tanktop_female from './templates/mockup-tanktop-female';
+import Mockup_tapestries from './templates/mockup-tapestries';
+import Mockup_zipper_pouch_black from './templates/mockup-zipper-pouch-black';
+import Mockup_zipper_pouch_white from './templates/mockup-zipper-pouch-white';
 export const runtime = 'edge';
  
 async function loadGoogleFont (font, text) {
@@ -294,6 +310,198 @@ export async function GET(request) {
       fonts: [{
         name: "BeVietnamPro",
         data: fontBeVietnam,
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-mug') { 
+    return new ImageResponse(<Mockup_mug params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam,
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-pillow-white') { 
+    return new ImageResponse(<Mockup_pillow_white params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-hat') { 
+    return new ImageResponse(<Mockup_hat params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-facemask') { 
+    return new ImageResponse(<Mockup_facemask params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-mousepad-s2') { 
+    return new ImageResponse(<Mockup_mousepad_s2 params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-notebook-black') { 
+    return new ImageResponse(<Mockup_notebook_black params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-notebook-white') { 
+    return new ImageResponse(<Mockup_notebook_white params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-phone-case') { 
+    return new ImageResponse(<Mockup_phone_case params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-pillow-cover-black') { 
+    return new ImageResponse(<Mockup_pillow_cover_black params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-pin') { 
+    return new ImageResponse(<Mockup_pin params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-shirt-black') { 
+    return new ImageResponse(<Mockup_shirt_black params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+  
+  if (template === 'mockup-shirt-white') { 
+    return new ImageResponse(<Mockup_shirt_white params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-tanktop-female') { 
+    return new ImageResponse(<Mockup_tanktop_female params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-tapestries') { 
+    return new ImageResponse(<Mockup_tapestries params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-zipper-pouch-black') { 
+    return new ImageResponse(<Mockup_zipper_pouch_black params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-zipper-pouch-white') { 
+    return new ImageResponse(<Mockup_zipper_pouch_white params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
