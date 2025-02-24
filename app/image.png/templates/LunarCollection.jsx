@@ -6,8 +6,8 @@ export default function LunarCollection({ params }) {
 
     return (
         <div tw="absolute inset-0 flex items-center justify-center">
-            <div tw="flex relative w-[250px] h-[250px] p-[15px]">
-                <img src={circle} tw="absolute w-[250px] h-[250px] inset-0 object-cover" />
+            <div tw="flex relative w-[300px] h-[300px] p-[20px]">
+                <img src={circle} tw="absolute w-[300px] h-[300px] inset-0 object-cover" />
                 <img
                     tw="w-full h-full object-cover rounded-full"
                     src={image} />
