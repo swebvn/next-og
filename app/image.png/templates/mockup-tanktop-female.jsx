@@ -10,9 +10,9 @@ export default function mockup_lunar1({ params }) {
             style={{
                 top: '50%',
                 left: '50%',
-                width: '250px',
-                height: '200px',
-                transform: 'translateX(-50%) translateY(-100%)',
+                width: '280px',
+                height: '280px',
+                transform: 'translateX(-55%) translateY(-75%)',
             }}>
             <img src={image_1} alt="" 
              style={{

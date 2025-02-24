@@ -11,7 +11,7 @@ export default function mockup_pillow_cover_black({ params }) {
                 top: '50%',
                 left: '50%',
                 width: '350px',
-                height: '250px',
+                height: '350px',
                 transform: 'translateX(-47%) translateY(-38%)',
             }}>
             <img src={image_1} alt="" 

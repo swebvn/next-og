@@ -11,7 +11,7 @@ export default function mockup_lunar1({ params }) {
                 top: '35%',
                 left: '50%',
                 width: '250px',
-                height: '200px',
+                height: '250px',
                 transform: 'translateX(-45%) translateY(-50%)',
             }}>
             <img src={image_1} alt="" 

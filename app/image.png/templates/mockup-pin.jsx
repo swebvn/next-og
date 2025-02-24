@@ -13,13 +13,13 @@ export default function mockup_lunar1({ params }) {
                 width: '750px',
                 height: '750px',
                 transform: 'translateX(-50%) translateY(-50%)',
-                borderRadius: '50%',
             }}>
             <img src={image_1} alt="" 
              style={{
                 width: '100%',
                 height: '100%',
                 objectFit: 'contain',
+                borderRadius: '50%',
             }}
             />
             </div>

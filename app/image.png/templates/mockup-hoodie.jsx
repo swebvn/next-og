@@ -10,10 +10,9 @@ export default function mockup_hoodie({ params }) {
             style={{
                 top: '50%',
                 left: '50%',
-                width: '250px',
-                height: '200px',
-                transform: 'translateX(-50%) translateY(-35%)',
-                padding: '15px',
+                width: '350px',
+                height: '350px',
+                transform: 'translateX(-55%) translateY(-22%)',
             }}>
             <img src={image_1} alt="" 
              style={{

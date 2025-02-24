@@ -10,10 +10,9 @@ export default function mockup_tanktop_male({ params }) {
             style={{
                 top: '50%',
                 left: '50%',
-                width: '250px',
-                height: '200px',
-                transform: 'translateX(-45%) translateY(-100%)',
-                padding: '15px',
+                width: '300px',
+                height: '300px',
+                transform: 'translateX(-50%) translateY(-80%)',
             }}> 
             <img src={image_1} alt="" 
              style={{

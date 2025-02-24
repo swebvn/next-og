@@ -10,9 +10,9 @@ export default function mockup_pillow_white({ params }) {
             style={{
                 top: '50%',
                 left: '50%',
-                width: '250px',
-                height: '200px',
-                transform: 'translateX(-53%) translateY(-25%)',
+                width: '350px',
+                height: '350px',
+                transform: 'translateX(-53%) translateY(-27%)',
             }}>
             <img src={image_1} alt="" 
              style={{

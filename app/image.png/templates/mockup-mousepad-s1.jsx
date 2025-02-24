@@ -13,7 +13,6 @@ export default function mockup_mousepad_s1({ params }) {
                 width: '500px',
                 height: '400px',
                 transform: 'translateX(-50%) translateY(-50%)',
-                padding: '15px',
             }}> 
             <img src={image_1} alt="" 
              style={{

@@ -8,10 +8,10 @@ export default function mockup_sweatshirt({ params }) {
             </div>
             <div tw="absolute flex flex-col items-center justify-center" 
             style={{
-                top: '44%',
-                left: '52%',
-                width: '250px',
-                height: '200px',
+                top: '50%',
+                left: '50%',
+                width: '290px',
+                height: '290px',
                 transform: 'translateX(-50%) translateY(-100%)',
             }}>
             <img src={image_1} alt="" 
