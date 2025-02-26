@@ -38,6 +38,7 @@ import Mockup_tanktop_female from './templates/mockup-tanktop-female';
 import Mockup_tapestries from './templates/mockup-tapestries';
 import Mockup_zipper_pouch_black from './templates/mockup-zipper-pouch-black';
 import Mockup_zipper_pouch_white from './templates/mockup-zipper-pouch-white';
+import Mockup_banner_lunar from './templates/mockup-banner-lunar';
 export const runtime = 'edge';
  
 async function loadGoogleFont (font, text) {
@@ -507,5 +508,17 @@ export async function GET(request) {
     });
   }
   
+  if (template === 'mockup-banner-lunar') { 
+    return new ImageResponse(<Mockup_banner_lunar params={searchParams} />, {
+      width: 1920,
+      height: 730,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+
   return new Response('Template not found', { status: 404 });
 }
