@@ -13,7 +13,6 @@ export default function mockup_mug_type_2({ params }) {
                 width: '220px',
                 height: '220px',
                 transform: 'translateX(-50%) translateY(-50%)',
-                border: '1px solid #000',
             }}>
             <img src={image_1} alt="" 
              style={{
