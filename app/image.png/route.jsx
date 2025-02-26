@@ -39,6 +39,11 @@ import Mockup_tapestries from './templates/mockup-tapestries';
 import Mockup_zipper_pouch_black from './templates/mockup-zipper-pouch-black';
 import Mockup_zipper_pouch_white from './templates/mockup-zipper-pouch-white';
 import Mockup_banner_lunar from './templates/mockup-banner-lunar';
+import Mockup_mug_type_2 from './templates/mockup-mug-type-2';
+import Mockup_hoodie_black from './templates/mockup-hoodie-black';
+import Mockup_sweatshirt_black from './templates/mockup-sweatshirt-black';
+import Mockup_shirt_type_2_black from './templates/mockup-shirt-type-2-black';
+import Mockup_shirt_type_2_white from './templates/mockup-shirt-type-2-white';
 export const runtime = 'edge';
  
 async function loadGoogleFont (font, text) {
@@ -520,5 +525,64 @@ export async function GET(request) {
     });
   }
 
+  if (template === 'mockup-mug-type-2') { 
+    return new ImageResponse(<Mockup_mug_type_2 params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-hoodie-black') { 
+    return new ImageResponse(<Mockup_hoodie_black params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  } 
+
+  if (template === 'mockup-sweatshirt-black') { 
+    return new ImageResponse(<Mockup_sweatshirt_black params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-shirt-type-2-black') { 
+    return new ImageResponse(<Mockup_shirt_type_2_black params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'mockup-shirt-type-2-white') { 
+    return new ImageResponse(<Mockup_shirt_type_2_white params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
   return new Response('Template not found', { status: 404 });
 }
