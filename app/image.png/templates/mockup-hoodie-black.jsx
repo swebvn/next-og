@@ -1,4 +1,4 @@
-export default function mockup_shirt_black({ params }) {
+export default function mockup_hoodie_black({ params }) {
     const bg_image = params.get('bg_image')
     const image_1 = params.get('image_1')
     return (
@@ -8,12 +8,11 @@ export default function mockup_shirt_black({ params }) {
             </div>
             <div tw="absolute flex flex-col items-center justify-center" 
             style={{
-                top: '35%',
+                top: '50%',
                 left: '50%',
-                width: '250px',
-                height: '250px',
-                transform: 'translateX(-45%) translateY(-50%)',
-                border: '1px solid #000',
+                width: '330px',
+                height: '330px',
+                transform: 'translateX(-48%) translateY(-100%)',
             }}>
             <img src={image_1} alt="" 
              style={{
