@@ -13,7 +13,6 @@ export default function mockup_shirt_black({ params }) {
                 width: '250px',
                 height: '250px',
                 transform: 'translateX(-45%) translateY(-50%)',
-                border: '1px solid #000',
             }}>
             <img src={image_1} alt="" 
              style={{
