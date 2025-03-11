@@ -65,8 +65,8 @@ const CircularLayout = ({ keyword, titleStyle }) => (
             {keyword}
         </div>
         <div tw="flex gap-12 items-center justify-center">
-            <div tw="relative rotate-[-15deg] text-white font-bold">FANS</div>
-            <div tw="relative rotate-[15deg] text-white font-bold">MERCH</div>
+            <div tw="relative text-white font-bold">FANS</div>
+            <div tw="relative text-white font-bold">MERCH</div>
         </div>
     </div>
 );
