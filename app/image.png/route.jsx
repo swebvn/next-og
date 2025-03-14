@@ -62,7 +62,7 @@ async function loadGoogleFont (font, text) {
 }
 
 export async function GET(request) {
-  const { searchParams, host } = new URL(request.url);
+  const { searchParams } = new URL(request.url);
   const template = searchParams.get('template');
 
   if (template === 'lunar-logo') {
