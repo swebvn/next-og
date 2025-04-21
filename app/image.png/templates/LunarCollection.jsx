@@ -1,5 +1,5 @@
 export default function LunarCollection({ params }) {
-    const image = params.get('image') || 'https://remove-bg.customedge.co/lunar-merch.b-cdn.net/ouranhighschoolhostclub.store/media/150/ssrco,mhoodie,mens,fafafa:ca443f4786,front,square_product,x600-bg,f8f8f8.1.jpg';
+    const image = params.get('image') || 'https://lunar-merch.b-cdn.net/davidhenrie.shop/media/631/conversions/image-small.png';
     const text = params.get('text') || '';
     const circle = "https://tda-dev-asset.b-cdn.net/lunar/circle.png"
 
