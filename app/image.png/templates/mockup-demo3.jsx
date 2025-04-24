@@ -6,9 +6,6 @@ export default function mockup_demo_03({ params }) {
     const bg_image = params.get('bg_image')
     return (
         <div tw="relative flex w-full h-full items-center justify-center">
-            <div tw="absolute w-full h-full object-cover flex flex-col items-center justify-center">
-                <img src={bg_image} tw="w-full h-full" />
-            </div>
             <div tw="absolute flex flex-col items-center justify-center" 
             style={{
                 top: '108px',
@@ -22,6 +19,7 @@ export default function mockup_demo_03({ params }) {
                 height: '100%',
                 objectFit: 'contain',
                 position: 'absolute',
+                backgroundColor: 'white',
             }}
             />
             </div>
@@ -37,8 +35,8 @@ export default function mockup_demo_03({ params }) {
                 width: '100%',
                 height: '100%',
                 objectFit: 'contain',
-
                 position: 'absolute',
+                backgroundColor: 'white',
             }}
             />
             </div>
@@ -55,17 +53,33 @@ export default function mockup_demo_03({ params }) {
                 height: '100%',
                 objectFit: 'contain',
                 position: 'absolute',
+                backgroundColor: 'white',
             }}
             /> 
             </div>
+ 
             <div tw="absolute flex flex-col items-center justify-center" 
             style={{
-                top: '668px',
-                left: '480px',
-                width: '300px', 
-                height: '320px',
+                top: '535px',
+                left: '527px',
+                width: '441px', 
+                height: '341px',
+                backgroundColor: 'white',
+            }}> 
+            </div>
+            <div tw="absolute flex flex-col items-center justify-center" 
+            style={{
+                top: '628px',
+                left: '415px',
+                width: '400px', 
+                height: '370px',
                 transform: 'skewY(5deg) skewY(-2deg) scaleY(0.3) rotate(-45deg)', 
                 transformOrigin: 'top center',
+                overflow: 'hidden',
+                borderLeft: '20px solid #C0BEBF',
+                borderBottom: '20px solid #C0BEBF',
+                borderTop: '1px solid #C0BEBF',
+                borderRight: '1px solid #C0BEBF',
             }}> 
             <img src={image_4} alt=""  
              style={{
@@ -73,17 +87,16 @@ export default function mockup_demo_03({ params }) {
                 height: '100%',
                 objectFit: 'cover',
                 position: 'absolute',
-                border: '20px solid #000',
             }} 
             />
             </div> 
 
             <div tw="absolute flex flex-col items-center justify-center" 
             style={{
-                top: '660px',
-                left: '480px',
-                width: '300px', 
-                height: '320px',
+                top: '620px',
+                left: '415px',
+                width: '400px', 
+                height: '370px',
                 transform: 'skewY(5deg) skewY(-2deg) scaleY(0.3) rotate(-45deg)', 
                 transformOrigin: 'top center',
             }}> 
@@ -95,6 +108,10 @@ export default function mockup_demo_03({ params }) {
                 position: 'absolute',
             }}
             />
+            </div>
+
+            <div tw="absolute w-full h-full object-cover flex flex-col items-center justify-center">
+                <img src={bg_image} tw="w-full h-full" />
             </div>
 
         </div>
