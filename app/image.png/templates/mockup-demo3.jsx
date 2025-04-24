@@ -70,9 +70,9 @@ export default function mockup_demo_03({ params }) {
             <div tw="absolute flex flex-col items-center justify-center" 
             style={{
                 top: '628px',
-                left: '415px',
+                left: '405px',
                 width: '400px', 
-                height: '370px',
+                height: '400px',
                 transform: 'skewY(5deg) skewY(-2deg) scaleY(0.3) rotate(-45deg)', 
                 transformOrigin: 'top center',
                 overflow: 'hidden',
@@ -94,9 +94,9 @@ export default function mockup_demo_03({ params }) {
             <div tw="absolute flex flex-col items-center justify-center" 
             style={{
                 top: '620px',
-                left: '415px',
+                left: '405px',
                 width: '400px', 
-                height: '370px',
+                height: '400px',
                 transform: 'skewY(5deg) skewY(-2deg) scaleY(0.3) rotate(-45deg)', 
                 transformOrigin: 'top center',
             }}> 
