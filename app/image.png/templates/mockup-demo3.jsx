@@ -78,8 +78,6 @@ export default function mockup_demo_03({ params }) {
                 overflow: 'hidden',
                 borderLeft: '20px solid #C0BEBF',
                 borderBottom: '20px solid #C0BEBF',
-                borderTop: '1px solid #C0BEBF',
-                borderRight: '1px solid #C0BEBF',
             }}> 
             <img src={image_4} alt=""  
              style={{
