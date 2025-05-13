@@ -2,7 +2,7 @@ export default function mockup_demo_03({ params }) {
     const image_1 = params.get('image_1')
     const image_2 = params.get('image_2')
     const image_3 = params.get('image_3')
-    const image_4 = params.get('image_4')
+    // const image_4 = params.get('image_4')
     const bg_image = params.get('bg_image')
     return (
         <div tw="relative flex w-full h-full items-center justify-center">
@@ -58,7 +58,7 @@ export default function mockup_demo_03({ params }) {
             /> 
             </div>
  
-            <div tw="absolute flex flex-col items-center justify-center" 
+            {/* <div tw="absolute flex flex-col items-center justify-center" 
             style={{
                 top: '535px',
                 left: '527px',
@@ -66,8 +66,8 @@ export default function mockup_demo_03({ params }) {
                 height: '341px',
                 backgroundColor: 'white',
             }}> 
-            </div>
-            <div tw="absolute flex flex-col items-center justify-center" 
+            </div> */}
+            {/* <div tw="absolute flex flex-col items-center justify-center" 
             style={{
                 top: '628px',
                 left: '405px',
@@ -87,9 +87,9 @@ export default function mockup_demo_03({ params }) {
                 position: 'absolute',
             }} 
             />
-            </div> 
+            </div>  */}
 
-            <div tw="absolute flex flex-col items-center justify-center" 
+            {/* <div tw="absolute flex flex-col items-center justify-center" 
             style={{
                 top: '620px',
                 left: '405px',
@@ -106,7 +106,7 @@ export default function mockup_demo_03({ params }) {
                 position: 'absolute',
             }}
             />
-            </div>
+            </div> */}
 
             <div tw="absolute w-full h-full object-cover flex flex-col items-center justify-center">
                 <img src={bg_image} tw="w-full h-full" />
