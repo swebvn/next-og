@@ -47,8 +47,15 @@ import Mockup_shirt_type_2_white from './templates/mockup-shirt-type-2-white';
 import Mockup_demo_01 from './templates/mockup-demo1';
 import Mockup_demo_02 from './templates/mockup-demo2';
 import Mockup_demo_03 from './templates/mockup-demo3';
+import Theme_2_banner from './templates/theme-lunar-2-banner';
+import Theme_2_collection from './templates/theme-lunar-2-collection';
+import Theme_2_pillow from './templates/theme-lunar-2-pillow';
+import Theme_2_bag from './templates/theme-lunar-2-bag';
+import Theme_2_mug from './templates/theme-lunar-2-mug';
+import Theme_2_hoodie from './templates/theme-lunar-2-hoodie';
+import Theme_2_sweatshirt from './templates/theme-lunar-2-sweatshirt';
 export const runtime = 'edge';
-
+ 
 async function loadGoogleFont (font, text) {
   const url = `https://fonts.googleapis.com/css2?family=${font}&text=${encodeURIComponent(text)}`
   const css = await (await fetch(url)).text()
@@ -85,8 +92,8 @@ export async function GET(request) {
 
   if (template === 'lunar-collection') {
     return new ImageResponse(<LunarCollection params={searchParams} />, {
-        width: 500,
-        height: 500,
+        width: 300,
+        height: 300,
     });
   }
 
@@ -216,7 +223,7 @@ export async function GET(request) {
     });
   }
 
-  if (template === 'mockup-lunar1') {
+  if (template === 'mockup-lunar1') { 
     return new ImageResponse(<Mockup_lunar1 params={searchParams} />, {
       width: 1000,
       height: 1000,
@@ -228,7 +235,7 @@ export async function GET(request) {
     });
   }
 
-  if (template === 'mockup-hoodie') {
+  if (template === 'mockup-hoodie') { 
     return new ImageResponse(<Mockup_hoodie params={searchParams} />, {
       width: 1000,
       height: 1000,
@@ -240,7 +247,7 @@ export async function GET(request) {
     });
   }
 
-  if (template === 'mockup-tanktop-male') {
+  if (template === 'mockup-tanktop-male') { 
     return new ImageResponse(<Mockup_tanktop_male params={searchParams} />, {
       width: 1000,
       height: 1000,
@@ -252,7 +259,7 @@ export async function GET(request) {
     });
   }
 
-  if (template === 'mockup-mousepad-s1') {
+  if (template === 'mockup-mousepad-s1') { 
     return new ImageResponse(<Mockup_mousepad_s1 params={searchParams} />, {
       width: 1000,
       height: 1000,
@@ -264,7 +271,7 @@ export async function GET(request) {
     });
   }
 
-  if (template === 'mockup-sweatshirt') {
+  if (template === 'mockup-sweatshirt') { 
     return new ImageResponse(<Mockup_sweatshirt params={searchParams} />, {
       width: 1000,
       height: 1000,
@@ -276,7 +283,7 @@ export async function GET(request) {
     });
   }
 
-  if (template === 'mockup-poster') {
+  if (template === 'mockup-poster') { 
     return new ImageResponse(<Mockup_poster params={searchParams} />, {
       width: 1000,
       height: 1000,
@@ -288,7 +295,7 @@ export async function GET(request) {
     });
   }
 
-  if (template === 'mockup-bag') {
+  if (template === 'mockup-bag') { 
     return new ImageResponse(<Mockup_bag params={searchParams} />, {
       width: 1000,
       height: 1000,
@@ -300,7 +307,7 @@ export async function GET(request) {
     });
   }
 
-  if (template === 'mockup-cap') {
+  if (template === 'mockup-cap') { 
     return new ImageResponse(<Mockup_cap params={searchParams} />, {
       width: 1000,
       height: 1000,
@@ -312,7 +319,7 @@ export async function GET(request) {
     });
   }
 
-  if (template === 'mockup-dress') {
+  if (template === 'mockup-dress') { 
     return new ImageResponse(<Mockup_dress params={searchParams} />, {
       width: 1000,
       height: 1000,
@@ -324,7 +331,7 @@ export async function GET(request) {
     });
   }
 
-  if (template === 'mockup-mug') {
+  if (template === 'mockup-mug') { 
     return new ImageResponse(<Mockup_mug params={searchParams} />, {
       width: 1000,
       height: 1000,
@@ -336,293 +343,375 @@ export async function GET(request) {
     });
   }
 
-  if (template === 'mockup-pillow-white') {
+  if (template === 'mockup-pillow-white') { 
     return new ImageResponse(<Mockup_pillow_white params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
 
-  if (template === 'mockup-hat') {
+  if (template === 'mockup-hat') { 
     return new ImageResponse(<Mockup_hat params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
 
-  if (template === 'mockup-facemask') {
+  if (template === 'mockup-facemask') { 
     return new ImageResponse(<Mockup_facemask params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
 
-  if (template === 'mockup-mousepad-s2') {
+  if (template === 'mockup-mousepad-s2') { 
     return new ImageResponse(<Mockup_mousepad_s2 params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
 
-  if (template === 'mockup-notebook-black') {
+  if (template === 'mockup-notebook-black') { 
     return new ImageResponse(<Mockup_notebook_black params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
 
-  if (template === 'mockup-notebook-white') {
+  if (template === 'mockup-notebook-white') { 
     return new ImageResponse(<Mockup_notebook_white params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
 
-  if (template === 'mockup-phone-case') {
+  if (template === 'mockup-phone-case') { 
     return new ImageResponse(<Mockup_phone_case params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
 
-  if (template === 'mockup-pillow-cover-black') {
+  if (template === 'mockup-pillow-cover-black') { 
     return new ImageResponse(<Mockup_pillow_cover_black params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
 
-  if (template === 'mockup-pin') {
+  if (template === 'mockup-pin') { 
     return new ImageResponse(<Mockup_pin params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
 
-  if (template === 'mockup-shirt-black') {
+  if (template === 'mockup-shirt-black') { 
     return new ImageResponse(<Mockup_shirt_black params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
-
-  if (template === 'mockup-shirt-white') {
+  
+  if (template === 'mockup-shirt-white') { 
     return new ImageResponse(<Mockup_shirt_white params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
 
-  if (template === 'mockup-tanktop-female') {
+  if (template === 'mockup-tanktop-female') { 
     return new ImageResponse(<Mockup_tanktop_female params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
 
-  if (template === 'mockup-tapestries') {
+  if (template === 'mockup-tapestries') { 
     return new ImageResponse(<Mockup_tapestries params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
 
-  if (template === 'mockup-zipper-pouch-black') {
+  if (template === 'mockup-zipper-pouch-black') { 
     return new ImageResponse(<Mockup_zipper_pouch_black params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
 
-  if (template === 'mockup-zipper-pouch-white') {
+  if (template === 'mockup-zipper-pouch-white') { 
     return new ImageResponse(<Mockup_zipper_pouch_white params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
-
-  if (template === 'mockup-banner-lunar') {
+  
+  if (template === 'mockup-banner-lunar') { 
     return new ImageResponse(<Mockup_banner_lunar params={searchParams} />, {
       width: 1920,
       height: 730,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
 
-  if (template === 'mockup-mug-type-2') {
+  if (template === 'mockup-mug-type-2') { 
     return new ImageResponse(<Mockup_mug_type_2 params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
 
-  if (template === 'mockup-hoodie-black') {
+  if (template === 'mockup-hoodie-black') { 
     return new ImageResponse(<Mockup_hoodie_black params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
-  }
+  } 
 
-  if (template === 'mockup-sweatshirt-black') {
+  if (template === 'mockup-sweatshirt-black') { 
     return new ImageResponse(<Mockup_sweatshirt_black params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
 
-  if (template === 'mockup-shirt-type-2-black') {
+  if (template === 'mockup-shirt-type-2-black') { 
     return new ImageResponse(<Mockup_shirt_type_2_black params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
 
-  if (template === 'mockup-shirt-type-2-white') {
+  if (template === 'mockup-shirt-type-2-white') { 
     return new ImageResponse(<Mockup_shirt_type_2_white params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
 
-  if (template === 'mockup-demo1') {
+  if (template === 'mockup-demo1') { 
     return new ImageResponse(<Mockup_demo_01 params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
-
-  if (template === 'mockup-demo2') {
+  
+  if (template === 'mockup-demo2') { 
     return new ImageResponse(<Mockup_demo_02 params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
 
-  if (template === 'mockup-demo3') {
+  if (template === 'mockup-demo3') { 
     return new ImageResponse(<Mockup_demo_03 params={searchParams} />, {
       width: 1000,
       height: 1000,
       fonts: [{
         name: "BeVietnamPro",
-        data: fontBeVietnam,
+        data: fontBeVietnam, 
         style: "normal",
       } ]
     });
   }
 
+    if (template === 'theme-lunar-2-banner') { 
+    return new ImageResponse(<Theme_2_banner params={searchParams} />, {
+      width: 1920,
+      height: 730,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+
+  if (template === 'theme-lunar-2-collection') { 
+    return new ImageResponse(<Theme_2_collection params={searchParams} />, {
+      width: 500,
+      height: 500,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+
+    if (template === 'theme-lunar-2-pillow') { 
+    return new ImageResponse(<Theme_2_pillow params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+  
+    if (template === 'theme-lunar-2-bag') { 
+    return new ImageResponse(<Theme_2_bag params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+    if (template === 'theme-lunar-2-mug') { 
+    return new ImageResponse(<Theme_2_mug params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+  if (template === 'theme-lunar-2-hoodie') { 
+    return new ImageResponse(<Theme_2_hoodie params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+  if (template === 'theme-lunar-2-sweatshirt') { 
+    return new ImageResponse(<Theme_2_sweatshirt params={searchParams} />, {
+      width: 1000,
+      height: 1000,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam, 
+        style: "normal",
+      } ]
+    });
+  }
+
+  
   return new Response('Template not found', { status: 404 });
 }
