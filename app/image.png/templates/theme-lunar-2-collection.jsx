@@ -6,10 +6,12 @@ export default function theme_2_collection({ params }) {
         <div tw="relative flex w-full h-full items-center justify-center">
              <div tw="absolute flex flex-col items-center justify-center" 
             style={{
-                top: '10px',
-                left: '10px',
-                width: '480px',
-                height: '480px',
+                top: '12px',
+                left: '12px',
+                width: '475px',
+                height: '475px',
+                borderRadius: '70px',
+                overflow: 'hidden',
             }}>
             <img src={image} alt="" 
              style={{
