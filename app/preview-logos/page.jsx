@@ -5,6 +5,8 @@ import { LAYOUTS } from '../image.png/templates/LunarLogo';
 
 const VARIANTS = Object.values(LAYOUTS);
 
+export const ssr = false;
+
 export default function PreviewLogos() {
     const [keyword, setKeyword] = useState('The Lucommerce');
     const [refreshKey, setRefreshKey] = useState(0);
