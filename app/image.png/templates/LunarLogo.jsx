@@ -19,8 +19,14 @@ const LAYOUTS = {
     DEFAULT: 'default',
     VERTICAL: 'vertical',
     CIRCULAR: 'circular',
-    DIAGONAL: 'diagonal'
+    DIAGONAL: 'diagonal',
+    STACKED: 'stacked',
+    SPLIT: 'split',
+    GRADIENT: 'gradient'
 };
+
+// Export for reuse in other components
+export { COLORS, LAYOUTS };
 
 const getRandomItem = (array) => array[Math.floor(Math.random() * array.length)];
 
@@ -95,11 +101,108 @@ const DiagonalLayout = ({ keyword, titleStyle, color }) => (
     </div>
 );
 
+const StackedLayout = ({ keyword, titleStyle, color }) => (
+    <div tw="mx-auto flex flex-col items-center text-3xl uppercase max-w-[450px]">
+        <div tw="text-center text-4xl mb-4" style={titleStyle}>
+            {keyword}
+        </div>
+        <div tw="flex items-center gap-5">
+            <div
+                tw="text-white font-bold text-2xl px-5 py-2"
+                style={{
+                    background: `linear-gradient(90deg, ${color}, ${color}aa)`,
+                    borderRadius: '18px',
+                    boxShadow: `0 0 15px ${color}44`
+                }}
+            >
+                FANS
+            </div>
+            <div
+                tw="text-white font-bold text-2xl px-5 py-2"
+                style={{
+                    background: `linear-gradient(90deg, ${color}aa, ${color})`,
+                    borderRadius: '18px',
+                    boxShadow: `0 0 15px ${color}44`
+                }}
+            >
+                MERCH
+            </div>
+        </div>
+    </div>
+);
+
+const SplitLayout = ({ keyword, titleStyle, color }) => (
+    <div tw="mx-auto flex items-center justify-between text-3xl uppercase max-w-[480px] w-full px-4">
+        <div tw="flex flex-col items-start">
+            <div tw="text-white font-bold text-3xl">FANS</div>
+            <div tw="text-white font-bold text-3xl">MERCH</div>
+        </div>
+        <div tw="flex items-center justify-center flex-1">
+            <div
+                tw="text-center text-4xl px-4"
+                style={{
+                    ...titleStyle,
+                    background: `linear-gradient(45deg, transparent, ${color}22, transparent)`,
+                    borderRadius: '8px'
+                }}
+            >
+                {keyword}
+            </div>
+        </div>
+        <div tw="flex flex-col items-end opacity-60">
+            <div tw="text-white font-bold text-xl">PREMIUM</div>
+            <div tw="text-white font-bold text-xl">QUALITY</div>
+        </div>
+    </div>
+);
+
+const GradientLayout = ({ keyword, titleStyle, color }) => (
+    <div tw="mx-auto flex flex-col items-center text-3xl uppercase max-w-[450px] relative">
+        <div
+            tw="text-center text-4xl mb-5 px-8 py-3"
+            style={{
+                ...titleStyle,
+                background: `linear-gradient(135deg, ${color}33, transparent, ${color}33)`,
+                borderRadius: '12px',
+                border: `1px solid ${color}66`,
+                backdropFilter: 'blur(10px)'
+            }}
+        >
+            {keyword}
+        </div>
+        <div tw="flex items-center gap-8 relative">
+            <div
+                tw="text-white font-bold text-2xl px-5 py-2 transform -rotate-2"
+                style={{
+                    background: `linear-gradient(45deg, ${color}, ${color}dd)`,
+                    borderRadius: '10px',
+                    boxShadow: `0 4px 16px ${color}66`
+                }}
+            >
+                FANS
+            </div>
+            <div
+                tw="text-white font-bold text-2xl px-5 py-2 transform rotate-2"
+                style={{
+                    background: `linear-gradient(-45deg, ${color}, ${color}dd)`,
+                    borderRadius: '10px',
+                    boxShadow: `0 4px 16px ${color}66`
+                }}
+            >
+                MERCH
+            </div>
+        </div>
+    </div>
+);
+
 const layoutComponents = {
     [LAYOUTS.DEFAULT]: DefaultLayout,
     [LAYOUTS.VERTICAL]: VerticalLayout,
     [LAYOUTS.CIRCULAR]: CircularLayout,
-    [LAYOUTS.DIAGONAL]: DiagonalLayout
+    [LAYOUTS.DIAGONAL]: DiagonalLayout,
+    [LAYOUTS.STACKED]: StackedLayout,
+    [LAYOUTS.SPLIT]: SplitLayout,
+    [LAYOUTS.GRADIENT]: GradientLayout
 };
 
 export default function LunarLogo({ params }) {
