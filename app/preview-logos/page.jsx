@@ -14,6 +14,7 @@ export default function PreviewLogos() {
     };
 
     const getImageUrl = (variant) => {
+        if (typeof window === 'undefined') return '';
         const baseUrl = window.location.origin;
         return `${baseUrl}/image.png?template=lunar-logo&text=${encodeURIComponent(keyword)}&variant=${variant}&_=${refreshKey}`;
     };
