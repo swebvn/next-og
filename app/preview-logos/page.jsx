@@ -60,44 +60,10 @@ export default function PreviewLogos() {
                                     style={{ aspectRatio: '500/200' }}
                                 />
                             </div>
-                            <div className="text-center">
-                                <p className="text-sm text-gray-400 mb-2">Size: 500x200</p>
-                                <button
-                                    onClick={() => window.open(getImageUrl(variant), '_blank')}
-                                    className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded text-sm font-medium transition-colors"
-                                >
-                                    Open Full Size
-                                </button>
-                            </div>
                         </div>
                     ))}
                 </div>
 
-                {/* Random Variant */}
-                <div className="mt-12 bg-gray-800 rounded-lg p-6 shadow-lg">
-                    <h3 className="text-2xl font-bold mb-4 text-center text-purple-400">
-                        Random Variant (No variant parameter)
-                    </h3>
-                    <div className="bg-black rounded-lg p-4 mb-4 max-w-2xl mx-auto">
-                        <img
-                            src={`${typeof window !== 'undefined' ? window.location.origin : ''}/image.png?text=${encodeURIComponent(keyword)}&_=${refreshKey}`}
-                            alt="Random logo variant"
-                            className="w-full h-auto rounded border border-gray-600"
-                            style={{ aspectRatio: '500/200' }}
-                        />
-                    </div>
-                    <div className="text-center">
-                        <p className="text-sm text-gray-400 mb-4">
-                            This shows a randomly selected variant (changes on each refresh)
-                        </p>
-                        <button
-                            onClick={handleRefresh}
-                            className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-medium transition-colors"
-                        >
-                            Get New Random Variant
-                        </button>
-                    </div>
-                </div>
 
                 {/* Usage Information */}
                 <div className="mt-12 bg-gray-800 rounded-lg p-6">
