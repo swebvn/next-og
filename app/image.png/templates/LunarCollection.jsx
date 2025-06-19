@@ -1,11 +1,9 @@
 export default function LunarCollection({ params }) {
-  const image =
-    params.get("image") ||
-    "https://lunar-merch.b-cdn.net/davidhenrie.shop/media/631/conversions/image-small.png";
+  const image = params.get("image") || "https://lunar-merch.b-cdn.net/davidhenrie.shop/media/631/conversions/image-small.png";
   const text = params.get("text") || "";
   const circle = "https://tda-dev-asset.b-cdn.net/lunar/circle.png";
   const variant = params.get("variant") || "v1";
-  const bg_image = params.get("bg_image"); || "https://tda-dev-asset.b-cdn.net/lunar/collection-theme-2-new.png";
+  const bg_image = params.get("bg_image") || "https://tda-dev-asset.b-cdn.net/lunar/collection-theme-2-new.png";
   if (variant === "v1") {
     return (
       <div tw="absolute inset-0 flex items-center justify-center">
