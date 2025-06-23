@@ -6,7 +6,4 @@ export default function theme_2_banner({ params }) {
     const image_4 = params.get('image_4')
     const text_1 = params.get('text_1')
     const text_2 = params.get('text_2')
-    return (
-
-    )
 }

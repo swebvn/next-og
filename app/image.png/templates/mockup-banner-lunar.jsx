@@ -7,7 +7,7 @@ export default function mockup_banner_lunar({ params }) {
     const text_1 = params.get('text_1')
     const text_2 = params.get('text_2')
 
-    const variants = ['v1', 'v2', 'v3', 'v4'];
+    const variants = ['v1', 'v2'];
 
     const variant = params.get('variant') || variants[Math.floor(Math.random() * variants.length)];
 

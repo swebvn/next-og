@@ -47,7 +47,6 @@ import Mockup_shirt_type_2_white from './templates/mockup-shirt-type-2-white';
 import Mockup_demo_01 from './templates/mockup-demo1';
 import Mockup_demo_02 from './templates/mockup-demo2';
 import Mockup_demo_03 from './templates/mockup-demo3';
-import Theme_2_banner from './templates/theme-lunar-2-banner';
 import Theme_2_collection from './templates/theme-lunar-2-collection';
 import Theme_2_pillow from './templates/theme-lunar-2-pillow';
 import Theme_2_bag from './templates/theme-lunar-2-bag';
@@ -623,18 +622,6 @@ export async function GET(request) {
     return new ImageResponse(<Mockup_demo_03 params={searchParams} />, {
       width: 1000,
       height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-    if (template === 'theme-lunar-2-banner') {
-    return new ImageResponse(<Theme_2_banner params={searchParams} />, {
-      width: 1920,
-      height: 730,
       fonts: [{
         name: "BeVietnamPro",
         data: fontBeVietnam,
