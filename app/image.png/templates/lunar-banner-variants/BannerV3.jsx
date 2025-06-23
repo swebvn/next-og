@@ -17,7 +17,7 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                     position: 'absolute',
                     width: '100%',
                     height: '100%',
-                    filter: 'blur(12px)',
+                    filter: 'blur(4px)',
                     objectFit: 'cover',
                     zIndex: -1,
                 }}
@@ -195,10 +195,10 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
             {/* Product Grid - Right Side */}
             <div style={{
                 position: 'absolute',
-                top: '50px',
-                right: '50px',
-                width: '650px',
-                height: '630px',
+                top: '30px',
+                right: '30px',
+                width: '750px',
+                height: '670px',
                 display: 'flex',
             }}>
                 {/* Sparkles around products */}
@@ -248,10 +248,10 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                 {/* Product 1 with "NEW" badge */}
                 <div style={{
                     position: 'absolute',
-                    top: '20px',
-                    left: '50px',
-                    width: '260px',
-                    height: '260px',
+                    top: '10px',
+                    left: '30px',
+                    width: '320px',
+                    height: '320px',
                     transform: 'rotate(-8deg)',
                     border: '6px solid #fff',
                     borderRadius: '15px',
@@ -290,10 +290,10 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                 {/* Product 2 with "SALE" badge */}
                 <div style={{
                     position: 'absolute',
-                    top: '40px',
-                    right: '20px',
-                    width: '280px',
-                    height: '240px',
+                    top: '20px',
+                    right: '10px',
+                    width: '340px',
+                    height: '300px',
                     transform: 'rotate(5deg)',
                     border: '6px solid #fff',
                     borderRadius: '15px',
@@ -332,10 +332,10 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                 {/* Product 3 */}
                 <div style={{
                     position: 'absolute',
-                    bottom: '120px',
-                    left: '20px',
-                    width: '240px',
-                    height: '220px',
+                    bottom: '150px',
+                    left: '10px',
+                    width: '300px',
+                    height: '280px',
                     transform: 'rotate(3deg)',
                     border: '6px solid #fff',
                     borderRadius: '15px',
@@ -354,10 +354,10 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                 {/* Product 4 with "HOT" badge */}
                 <div style={{
                     position: 'absolute',
-                    bottom: '50px',
-                    right: '40px',
-                    width: '260px',
-                    height: '240px',
+                    bottom: '20px',
+                    right: '20px',
+                    width: '320px',
+                    height: '300px',
                     transform: 'rotate(-3deg)',
                     border: '6px solid #fff',
                     borderRadius: '15px',
