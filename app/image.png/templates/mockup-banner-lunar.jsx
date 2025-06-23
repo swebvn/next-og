@@ -1,15 +1,23 @@
 export default function mockup_banner_lunar({ params }) {
-    const bg_image = params.get('bg_image')
-    const image_1 = params.get('image_1')
-    const image_2 = params.get('image_2')
-    const image_3 = params.get('image_3')
-    const image_4 = params.get('image_4')
-    const text_1 = params.get('text_1')
-    const text_2 = params.get('text_2')
+    const image_1 = params.get('image_1') || 'https://daudau.cc/images/crab.png'
+    const image_2 = params.get('image_2') || 'https://daudau.cc/images/crab.png'
+    const image_3 = params.get('image_3') || 'https://daudau.cc/images/crab.png'
+    const image_4 = params.get('image_4') || 'https://daudau.cc/images/crab.png'
+    const text_1 = params.get('text_1') || 'The Lunar Collection'
+    const text_2 = params.get('text_2') || 'Shop the latest merchandise products';
 
     const variants = ['v1', 'v2'];
+    const variantsConfig= {
+        v1: {
+            bg_image: 'https://tda-dev-asset.b-cdn.net/lunar/banner-v1.png',
+        },
+        v2: {
+            bg_image: 'https://tda-dev-asset.b-cdn.net/lunar/banner-v2.png',
+        },
+    }
 
     const variant = params.get('variant') || variants[Math.floor(Math.random() * variants.length)];
+    let bg_image = variantsConfig[variant].bg_image;
 
     if (variant === 'v1') {
         return (
