@@ -1,171 +1,32 @@
+import { BANNER_VARIANTS, VARIANTS_CONFIG } from './lunar-banner-variants/index.js';
+
 export default function mockup_banner_lunar({ params }) {
-    const image_1 = params.get('image_1') || 'https://daudau.cc/images/crab.png'
-    const image_2 = params.get('image_2') || 'https://daudau.cc/images/crab.png'
-    const image_3 = params.get('image_3') || 'https://daudau.cc/images/crab.png'
-    const image_4 = params.get('image_4') || 'https://daudau.cc/images/crab.png'
+    const image_1 = params.get('image_1') || 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=500&fit=crop'
+    const image_2 = params.get('image_2') || 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=500&h=500&fit=crop'
+    const image_3 = params.get('image_3') || 'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=500&h=500&fit=crop'
+    const image_4 = params.get('image_4') || 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=500&fit=crop'
     const text_1 = params.get('text_1') || 'The Lunar Collection'
     const text_2 = params.get('text_2') || 'Shop the latest merchandise products';
 
-    const variants = ['v1', 'v2'];
-    const variantsConfig= {
-        v1: {
-            bg_image: 'https://tda-dev-asset.b-cdn.net/lunar/banner-v1.png',
-        },
-        v2: {
-            bg_image: 'https://tda-dev-asset.b-cdn.net/lunar/banner-v2.png',
-        },
-    }
-
+    const variants = Object.keys(BANNER_VARIANTS);
     const variant = params.get('variant') || variants[Math.floor(Math.random() * variants.length)];
-    let bg_image = variantsConfig[variant].bg_image;
 
-    if (variant === 'v1') {
-        return (
-            <div tw="relative flex w-full h-full">
-                <img src={image_1} alt=""
-                    style={{
-                        width: '444px',
-                        height: '444px',
-                        borderRadius: '50%',
-                        top: '127px',
-                        left: '-44px',
-                        position: 'absolute',
-                    }}
-                />
+    const VariantComponent = BANNER_VARIANTS[variant];
+    const bg_image = VARIANTS_CONFIG[variant]?.bg_image;
 
-                <img src={image_2} alt=""
-                    style={{
-                        width: '473px',
-                        height: '473px',
-                        borderRadius: '50%',
-                        top: '108px',
-                        right: '-75px',
-                        position: 'absolute',
-                    }}
-                />
-
-                <img src={image_3} alt=""
-                    style={{
-                        width: '407px',
-                        height: '407px',
-                        borderRadius: '50%',
-                        top: '383px',
-                        left: '290px',
-                        position: 'absolute',
-                    }}
-                />
-
-                <img src={image_4} alt=""
-                    style={{
-                        width: '420px',
-                        height: '420px',
-                        borderRadius: '50%',
-                        top: '395px',
-                        right: '282px',
-                        position: 'absolute',
-                    }}
-                />
-                <div tw="absolute w-full h-full object-cover flex flex-col items-center  justify-center">
-                    <img src={bg_image} tw="w-full h-full" />
-                </div>
-                <h1 tw="text-center absolute"
-                    style={{
-                        fontFamily: 'BeVietnamPro',
-                        color: '#fff',
-                        top: '80px',
-                        left: '50%',
-                        fontSize: '60px',
-                        fontWeight: '700',
-                        transform: 'translateX(-50%) translateY(-50%)',
-                    }}
-                >{text_1}</h1>
-                <h3 tw="text-center absolute justify-center font-normal"
-                    style={{
-                        fontFamily: 'BeVietnamPro',
-                        color: '#fff',
-                        top: '50%',
-                        left: '50%',
-                        fontSize: '30px',
-                        transform: 'translateX(-50%) translateY(-50%)',
-                    }}>{text_2}</h3>
-            </div>
-        );
+    if (!VariantComponent) {
+        return <div tw="flex items-center justify-center w-full h-full">Invalid variant</div>;
     }
 
-    if (variant === 'v2') {
-        return (
-            <div tw="relative flex w-full h-full">
-                <img src={image_1} alt=""
-                    style={{
-                        width: '400px',
-                        height: '400px',
-                        top: '20px',
-                        left: '15px',
-                        position: 'absolute',
-                        transform: 'rotate(-5deg)',
-                    }}
-                />
-
-                <img src={image_2} alt=""
-                    style={{
-                        width: '305px',
-                        height: '305px',
-                        top: '402px',
-                        left: '100px',
-                        position: 'absolute',
-                        transform: 'rotate(3deg)',
-                    }}
-                />
-
-                <img src={image_3} alt=""
-                    style={{
-                        width: '400px',
-                        height: '400px',
-                        top: '390px',
-                        left: '445px',
-                        position: 'absolute',
-                        transform: 'rotate(-5deg)',
-                    }}
-                />
-
-                <img src={image_4} alt=""
-                    style={{
-                        width: '430px',
-                        height: '435px',
-                        top: '-15px',
-                        left: '430px',
-                        position: 'absolute',
-                        transform: 'rotate(3deg)',
-                    }}
-                />
-                <div tw="absolute w-full h-full object-cover flex flex-col items-center  justify-center">
-                    <img src={bg_image} tw="w-full h-full" />
-                </div>
-                <h1 tw="text-center absolute"
-                    style={{
-                        fontFamily: 'BeVietnamPro',
-                        color: '#fdefd2',
-                        top: '220px',
-                        left: '75%',
-                        fontSize: '60px',
-                        fontWeight: '700',
-                        transform: 'translateX(-50%) translateY(-50%)',
-                        maxWidth: '820px',
-                    }}
-                >{text_1}</h1>
-                <h3 tw="text-center absolute justify-center font-normal"
-                    style={{
-                        fontFamily: 'BeVietnamPro',
-                        color: '#fdefd2',
-                        top: '100px',
-                        left: '75%',
-                        fontSize: '30px',
-                        transform: 'translateX(-50%) translateY(-50%)',
-                        backgroundColor: '#4c3408',
-                        padding: '10px 20px',
-                        borderRadius: '10px',
-                    }}>{text_2}</h3>
-            </div>
-        )
-    }
+    return (
+        <VariantComponent
+            image_1={image_1}
+            image_2={image_2}
+            image_3={image_3}
+            image_4={image_4}
+            text_1={text_1}
+            text_2={text_2}
+            bg_image={bg_image}
+        />
+    );
 }
