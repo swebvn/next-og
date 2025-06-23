@@ -17,21 +17,20 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                     position: 'absolute',
                     width: '100%',
                     height: '100%',
-                    filter: 'blur(4px)',
+                    filter: 'blur(8px)',
                     objectFit: 'cover',
-                    zIndex: -1,
                 }}
                 src={randomBgImage} alt="Background Image"
             />
 
-            {/* Stronger overlay for better contrast */}
+            {/* Enhanced overlay with gradient */}
             <div style={{
                 position: 'absolute',
                 top: 0,
                 left: 0,
                 right: 0,
                 bottom: 0,
-                backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                background: 'linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(255,107,53,0.3) 50%, rgba(0,0,0,0.8) 100%)',
                 display: 'flex'
             }} />
 
@@ -43,7 +42,6 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                 fontSize: '24px',
                 color: '#FFD700',
                 textShadow: '0 0 10px #FFD700',
-                zIndex: 5,
                 display: 'flex',
             }}>✨</div>
 
@@ -54,7 +52,6 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                 fontSize: '18px',
                 color: '#FFF',
                 textShadow: '0 0 8px #FFF',
-                zIndex: 5,
                 display: 'flex',
             }}>⭐</div>
 
@@ -65,7 +62,6 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                 fontSize: '20px',
                 color: '#FFD700',
                 textShadow: '0 0 12px #FFD700',
-                zIndex: 5,
                 display: 'flex',
             }}>✨</div>
 
@@ -76,7 +72,6 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                 fontSize: '22px',
                 color: '#FFF',
                 textShadow: '0 0 10px #FFF',
-                zIndex: 5,
                 display: 'flex',
             }}>⭐</div>
 
@@ -87,7 +82,6 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                 fontSize: '16px',
                 color: '#FFD700',
                 textShadow: '0 0 8px #FFD700',
-                zIndex: 5,
                 display: 'flex',
             }}>✨</div>
 
@@ -98,7 +92,6 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                 fontSize: '20px',
                 color: '#FFF',
                 textShadow: '0 0 10px #FFF',
-                zIndex: 5,
                 display: 'flex',
             }}>⭐</div>
 
@@ -109,7 +102,6 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                 fontSize: '18px',
                 color: '#FFD700',
                 textShadow: '0 0 12px #FFD700',
-                zIndex: 5,
                 display: 'flex',
             }}>✨</div>
 
@@ -120,20 +112,36 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                 fontSize: '24px',
                 color: '#FFF',
                 textShadow: '0 0 15px #FFF',
-                zIndex: 5,
                 display: 'flex',
             }}>⭐</div>
 
             {/* Hero Text Section - Left Side */}
             <div style={{
                 position: 'absolute',
-                top: '120px',
+                top: '100px',
                 left: '80px',
-                width: '500px',
-                zIndex: 10,
+                width: '520px',
                 display: 'flex',
                 flexDirection: 'column',
             }}>
+                {/* Brand Badge */}
+                <div style={{
+                    backgroundColor: '#2c3e50',
+                    color: '#ffffff',
+                    padding: '12px 12px',
+                    borderRadius: '20px',
+                    fontSize: '14px',
+                    fontWeight: '700',
+                    fontFamily: 'BeVietnamPro',
+                    marginBottom: '15px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '1px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    whiteSpace: 'nowrap',
+                }}>
+                    🎯 PREMIUM COLLECTION
+                </div>
                 {/* Main Title */}
                 <h1 style={{
                     fontFamily: 'BeVietnamPro',
@@ -153,30 +161,45 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                 <div style={{
                     backgroundColor: 'rgba(255, 107, 53, 0.95)',
                     color: '#ffffff',
-                    padding: '12px 24px',
+                    padding: '15px 28px',
                     borderRadius: '25px',
-                    fontSize: '20px',
+                    fontSize: '22px',
                     fontWeight: '600',
                     fontFamily: 'BeVietnamPro',
-                    marginBottom: '30px',
+                    marginBottom: '20px',
                     display: 'flex',
                     textTransform: 'uppercase',
                     letterSpacing: '1px',
+                    boxShadow: '0 6px 20px rgba(255,107,53,0.4)',
                 }}>
-                    {text_2}
+                    🔥 {text_2} - UP TO 50% OFF
+                </div>
+
+                {/* Social Proof */}
+                <div style={{
+                    color: '#ffffff',
+                    fontSize: '16px',
+                    fontWeight: '500',
+                    fontFamily: 'BeVietnamPro',
+                    marginBottom: '25px',
+                    display: 'flex',
+                    alignItems: 'center',
+                }}>
+                    ⭐⭐⭐⭐⭐ 100+ Happy Customers
                 </div>
 
                 {/* CTA Buttons */}
                 <div style={{
                     display: 'flex',
-                    gap: '20px',
+                    gap: '15px',
+                    alignItems: 'center',
                 }}>
                     <div style={{
                         backgroundColor: '#FF6B35',
                         color: '#ffffff',
-                        padding: '18px 40px',
+                        padding: '18px 35px',
                         borderRadius: '50px',
-                        fontSize: '22px',
+                        fontSize: '20px',
                         fontWeight: '700',
                         fontFamily: 'BeVietnamPro',
                         textTransform: 'uppercase',
@@ -187,7 +210,7 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                         alignItems: 'center',
                         justifyContent: 'center',
                     }}>
-                        Shop Now
+                        🛒 SHOP NOW
                     </div>
                 </div>
             </div>
@@ -209,7 +232,6 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                     fontSize: '16px',
                     color: '#FFD700',
                     textShadow: '0 0 8px #FFD700',
-                    zIndex: 15,
                     display: 'flex',
                 }}>✨</div>
 
@@ -220,7 +242,6 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                     fontSize: '14px',
                     color: '#FFF',
                     textShadow: '0 0 6px #FFF',
-                    zIndex: 15,
                     display: 'flex',
                 }}>⭐</div>
 
@@ -231,7 +252,6 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                     fontSize: '18px',
                     color: '#FFD700',
                     textShadow: '0 0 10px #FFD700',
-                    zIndex: 15,
                     display: 'flex',
                 }}>✨</div>
 
@@ -242,7 +262,6 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                     fontSize: '16px',
                     color: '#FFF',
                     textShadow: '0 0 8px #FFF',
-                    zIndex: 15,
                     display: 'flex',
                 }}>⭐</div>
                 {/* Product 1 with "NEW" badge */}
@@ -320,12 +339,12 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '12px',
+                        fontSize: '10px',
                         fontWeight: '800',
                         fontFamily: 'BeVietnamPro',
                         boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
                     }}>
-                        SALE
+                        50% OFF
                     </div>
                 </div>
 
