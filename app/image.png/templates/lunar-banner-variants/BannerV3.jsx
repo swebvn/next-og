@@ -35,6 +35,95 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                 display: 'flex'
             }} />
 
+            {/* Sparkling Effects */}
+            <div style={{
+                position: 'absolute',
+                top: '80px',
+                left: '150px',
+                fontSize: '24px',
+                color: '#FFD700',
+                textShadow: '0 0 10px #FFD700',
+                zIndex: 5,
+                display: 'flex',
+            }}>✨</div>
+
+            <div style={{
+                position: 'absolute',
+                top: '200px',
+                left: '600px',
+                fontSize: '18px',
+                color: '#FFF',
+                textShadow: '0 0 8px #FFF',
+                zIndex: 5,
+                display: 'flex',
+            }}>⭐</div>
+
+            <div style={{
+                position: 'absolute',
+                top: '350px',
+                left: '200px',
+                fontSize: '20px',
+                color: '#FFD700',
+                textShadow: '0 0 12px #FFD700',
+                zIndex: 5,
+                display: 'flex',
+            }}>✨</div>
+
+            <div style={{
+                position: 'absolute',
+                top: '150px',
+                right: '200px',
+                fontSize: '22px',
+                color: '#FFF',
+                textShadow: '0 0 10px #FFF',
+                zIndex: 5,
+                display: 'flex',
+            }}>⭐</div>
+
+            <div style={{
+                position: 'absolute',
+                top: '400px',
+                right: '300px',
+                fontSize: '16px',
+                color: '#FFD700',
+                textShadow: '0 0 8px #FFD700',
+                zIndex: 5,
+                display: 'flex',
+            }}>✨</div>
+
+            <div style={{
+                position: 'absolute',
+                top: '500px',
+                left: '400px',
+                fontSize: '20px',
+                color: '#FFF',
+                textShadow: '0 0 10px #FFF',
+                zIndex: 5,
+                display: 'flex',
+            }}>⭐</div>
+
+            <div style={{
+                position: 'absolute',
+                top: '100px',
+                right: '400px',
+                fontSize: '18px',
+                color: '#FFD700',
+                textShadow: '0 0 12px #FFD700',
+                zIndex: 5,
+                display: 'flex',
+            }}>✨</div>
+
+            <div style={{
+                position: 'absolute',
+                top: '600px',
+                right: '150px',
+                fontSize: '24px',
+                color: '#FFF',
+                textShadow: '0 0 15px #FFF',
+                zIndex: 5,
+                display: 'flex',
+            }}>⭐</div>
+
             {/* Hero Text Section - Left Side */}
             <div style={{
                 position: 'absolute',
@@ -51,13 +140,13 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                     color: '#ffffff',
                     fontSize: '72px',
                     fontWeight: '900',
-                    textShadow: '4px 4px 12px rgba(0,0,0,0.8)',
+                    textShadow: '4px 4px 12px rgba(0,0,0,0.8), 0 0 20px rgba(255,215,0,0.5)',
                     lineHeight: '0.9',
                     marginBottom: '20px',
                     textTransform: 'uppercase',
                     letterSpacing: '-2px',
                 }}>
-                    {text_1} MERCHANDISE STORE
+                    ✨ {text_1} MERCHANDISE STORE ✨
                 </h1>
 
                 {/* Subtitle with value proposition */}
@@ -74,7 +163,7 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                     textTransform: 'uppercase',
                     letterSpacing: '1px',
                 }}>
-                    🔥 {text_2}
+                    {text_2}
                 </div>
 
                 {/* CTA Buttons */}
@@ -112,6 +201,50 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                 height: '630px',
                 display: 'flex',
             }}>
+                {/* Sparkles around products */}
+                <div style={{
+                    position: 'absolute',
+                    top: '10px',
+                    left: '20px',
+                    fontSize: '16px',
+                    color: '#FFD700',
+                    textShadow: '0 0 8px #FFD700',
+                    zIndex: 15,
+                    display: 'flex',
+                }}>✨</div>
+
+                <div style={{
+                    position: 'absolute',
+                    top: '180px',
+                    right: '10px',
+                    fontSize: '14px',
+                    color: '#FFF',
+                    textShadow: '0 0 6px #FFF',
+                    zIndex: 15,
+                    display: 'flex',
+                }}>⭐</div>
+
+                <div style={{
+                    position: 'absolute',
+                    bottom: '200px',
+                    left: '10px',
+                    fontSize: '18px',
+                    color: '#FFD700',
+                    textShadow: '0 0 10px #FFD700',
+                    zIndex: 15,
+                    display: 'flex',
+                }}>✨</div>
+
+                <div style={{
+                    position: 'absolute',
+                    bottom: '100px',
+                    right: '5px',
+                    fontSize: '16px',
+                    color: '#FFF',
+                    textShadow: '0 0 8px #FFF',
+                    zIndex: 15,
+                    display: 'flex',
+                }}>⭐</div>
                 {/* Product 1 with "NEW" badge */}
                 <div style={{
                     position: 'absolute',
