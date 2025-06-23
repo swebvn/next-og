@@ -11,151 +11,255 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
             height: '100%',
             overflow: 'hidden',
         }}>
+            {/* Background Image with stronger blur */}
             <img
                 style={{
                     position: 'absolute',
                     width: '100%',
                     height: '100%',
-                    filter: 'blur(8px)',
+                    filter: 'blur(12px)',
                     objectFit: 'cover',
                     zIndex: -1,
                 }}
                 src={randomBgImage} alt="Background Image"
             />
-            {/* Solid overlay for better content readability */}
+
+            {/* Stronger overlay for better contrast */}
             <div style={{
                 position: 'absolute',
                 top: 0,
                 left: 0,
                 right: 0,
                 bottom: 0,
-                backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                backgroundColor: 'rgba(0, 0, 0, 0.5)',
                 display: 'flex'
             }} />
 
-            {/* Image slots with retro styling */}
+            {/* Hero Text Section - Left Side */}
             <div style={{
                 position: 'absolute',
+                top: '120px',
+                left: '80px',
+                width: '500px',
+                zIndex: 10,
                 display: 'flex',
-                top: '60px',
-                left: '40px',
-                width: '420px',
-                height: '300px',
-                transform: 'rotate(-8deg)',
-                border: '8px solid #fff',
-                borderRadius: '12px',
-                boxShadow: '0 8px 16px rgba(0,0,0,0.3)',
+                flexDirection: 'column',
             }}>
-                <img src={image_1} alt="" style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    borderRadius: '4px'
-                }} />
+                {/* Main Title */}
+                <h1 style={{
+                    fontFamily: 'BeVietnamPro',
+                    color: '#ffffff',
+                    fontSize: '72px',
+                    fontWeight: '900',
+                    textShadow: '4px 4px 12px rgba(0,0,0,0.8)',
+                    lineHeight: '0.9',
+                    marginBottom: '20px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '-2px',
+                }}>
+                    {text_1} MERCHANDISE STORE
+                </h1>
+
+                {/* Subtitle with value proposition */}
+                <div style={{
+                    backgroundColor: 'rgba(255, 107, 53, 0.95)',
+                    color: '#ffffff',
+                    padding: '12px 24px',
+                    borderRadius: '25px',
+                    fontSize: '20px',
+                    fontWeight: '600',
+                    fontFamily: 'BeVietnamPro',
+                    marginBottom: '30px',
+                    display: 'flex',
+                    textTransform: 'uppercase',
+                    letterSpacing: '1px',
+                }}>
+                    🔥 {text_2}
+                </div>
+
+                {/* CTA Buttons */}
+                <div style={{
+                    display: 'flex',
+                    gap: '20px',
+                }}>
+                    <div style={{
+                        backgroundColor: '#FF6B35',
+                        color: '#ffffff',
+                        padding: '18px 40px',
+                        borderRadius: '50px',
+                        fontSize: '22px',
+                        fontWeight: '700',
+                        fontFamily: 'BeVietnamPro',
+                        textTransform: 'uppercase',
+                        letterSpacing: '1px',
+                        boxShadow: '0 8px 24px rgba(255,107,53,0.6)',
+                        border: '3px solid #ffffff',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}>
+                        Shop Now
+                    </div>
+                </div>
             </div>
 
+            {/* Product Grid - Right Side */}
             <div style={{
                 position: 'absolute',
+                top: '50px',
+                right: '50px',
+                width: '650px',
+                height: '630px',
                 display: 'flex',
-                top: '280px',
-                left: '0px',
-                width: '360px',
-                height: '270px',
-                transform: 'rotate(5deg)',
-                border: '8px solid #fff',
-                borderRadius: '12px',
-                boxShadow: '0 8px 16px rgba(0,0,0,0.3)',
             }}>
-                <img src={image_2} alt="" style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    borderRadius: '4px'
-                }} />
-            </div>
+                {/* Product 1 with "NEW" badge */}
+                <div style={{
+                    position: 'absolute',
+                    top: '20px',
+                    left: '50px',
+                    width: '260px',
+                    height: '260px',
+                    transform: 'rotate(-8deg)',
+                    border: '6px solid #fff',
+                    borderRadius: '15px',
+                    boxShadow: '0 12px 30px rgba(0,0,0,0.4)',
+                    backgroundColor: '#fff',
+                    display: 'flex',
+                }}>
+                    <img src={image_1} alt="" style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        borderRadius: '8px'
+                    }} />
+                    {/* NEW Badge */}
+                    <div style={{
+                        position: 'absolute',
+                        top: '-15px',
+                        right: '-15px',
+                        backgroundColor: '#FF6B35',
+                        color: '#fff',
+                        borderRadius: '50%',
+                        width: '50px',
+                        height: '50px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontSize: '12px',
+                        fontWeight: '800',
+                        fontFamily: 'BeVietnamPro',
+                        boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+                    }}>
+                        NEW
+                    </div>
+                </div>
 
-            <div style={{
-                position: 'absolute',
-                display: 'flex',
-                top: '80px',
-                right: '20px',
-                width: '390px',
-                height: '290px',
-                transform: 'rotate(3deg)',
-                border: '8px solid #fff',
-                borderRadius: '12px',
-                boxShadow: '0 8px 16px rgba(0,0,0,0.3)',
-            }}>
-                <img src={image_3} alt="" style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    borderRadius: '4px'
-                }} />
-            </div>
+                {/* Product 2 with "SALE" badge */}
+                <div style={{
+                    position: 'absolute',
+                    top: '40px',
+                    right: '20px',
+                    width: '280px',
+                    height: '240px',
+                    transform: 'rotate(5deg)',
+                    border: '6px solid #fff',
+                    borderRadius: '15px',
+                    boxShadow: '0 12px 30px rgba(0,0,0,0.4)',
+                    backgroundColor: '#fff',
+                    display: 'flex',
+                }}>
+                    <img src={image_2} alt="" style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        borderRadius: '8px'
+                    }} />
+                    {/* SALE Badge */}
+                    <div style={{
+                        position: 'absolute',
+                        top: '-15px',
+                        left: '-15px',
+                        backgroundColor: '#e74c3c',
+                        color: '#fff',
+                        borderRadius: '50%',
+                        width: '55px',
+                        height: '55px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontSize: '12px',
+                        fontWeight: '800',
+                        fontFamily: 'BeVietnamPro',
+                        boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+                    }}>
+                        SALE
+                    </div>
+                </div>
 
-            <div style={{
-                position: 'absolute',
-                display: 'flex',
-                top: '310px',
-                right: '60px',
-                width: '440px',
-                height: '300px',
-                transform: 'rotate(-4deg)',
-                border: '8px solid #fff',
-                borderRadius: '12px',
-                boxShadow: '0 8px 16px rgba(0,0,0,0.3)',
-            }}>
-                <img src={image_4} alt="" style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    borderRadius: '4px'
-                }} />
-            </div>
+                {/* Product 3 */}
+                <div style={{
+                    position: 'absolute',
+                    bottom: '120px',
+                    left: '20px',
+                    width: '240px',
+                    height: '220px',
+                    transform: 'rotate(3deg)',
+                    border: '6px solid #fff',
+                    borderRadius: '15px',
+                    boxShadow: '0 12px 30px rgba(0,0,0,0.4)',
+                    backgroundColor: '#fff',
+                    display: 'flex',
+                }}>
+                    <img src={image_3} alt="" style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        borderRadius: '8px'
+                    }} />
+                </div>
 
-            {/* CTA Button */}
-            <div style={{
-                position: 'absolute',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                top: '400px',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                backgroundColor: '#FF6B35',
-                color: '#fff',
-                padding: '16px 48px',
-                borderRadius: '50px',
-                fontSize: '24px',
-                fontWeight: '700',
-                fontFamily: 'BeVietnamPro',
-                letterSpacing: '2px',
-                textTransform: 'uppercase',
-                boxShadow: '0 6px 20px rgba(255,107,53,0.4)',
-            }}>
-                {text_2}
+                {/* Product 4 with "HOT" badge */}
+                <div style={{
+                    position: 'absolute',
+                    bottom: '50px',
+                    right: '40px',
+                    width: '260px',
+                    height: '240px',
+                    transform: 'rotate(-3deg)',
+                    border: '6px solid #fff',
+                    borderRadius: '15px',
+                    boxShadow: '0 12px 30px rgba(0,0,0,0.4)',
+                    backgroundColor: '#fff',
+                    display: 'flex',
+                }}>
+                    <img src={image_4} alt="" style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        borderRadius: '8px'
+                    }} />
+                    {/* HOT Badge */}
+                    <div style={{
+                        position: 'absolute',
+                        top: '-15px',
+                        right: '-15px',
+                        backgroundColor: '#f39c12',
+                        color: '#fff',
+                        borderRadius: '50%',
+                        width: '50px',
+                        height: '50px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontSize: '12px',
+                        fontWeight: '800',
+                        fontFamily: 'BeVietnamPro',
+                        boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+                    }}>
+                        HOT
+                    </div>
+                </div>
             </div>
-
-            {/* Main Title */}
-            <h1 style={{
-                position: 'absolute',
-                textAlign: 'center',
-                fontFamily: 'BeVietnamPro',
-                color: '#ffffff',
-                top: '180px',
-                left: '50%',
-                fontSize: '84px',
-                fontWeight: '800',
-                transform: 'translateX(-50%)',
-                textShadow: '3px 3px 8px rgba(0,0,0,0.8), 1px 1px 4px rgba(0,0,0,0.6)',
-                maxWidth: '700px',
-                lineHeight: '1.0',
-                backgroundColor: 'rgba(0,0,0,0.3)',
-                padding: '20px 40px',
-                borderRadius: '15px',
-            }}
-            >{text_1}</h1>
         </div>
     );
 }
