@@ -156,7 +156,7 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                     textTransform: 'uppercase',
                     letterSpacing: '-2px',
                 }}>
-                    ✨ {text_1} MERCHANDISE STORE ✨
+                    ✨ {text_1} ✨
                 </h1>
 
                 {/* Subtitle with value proposition */}
