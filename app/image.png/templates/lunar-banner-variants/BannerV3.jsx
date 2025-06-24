@@ -227,7 +227,7 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                 position: 'absolute',
                 top: '30px',
                 right: '30px',
-                width: '750px',
+                width: '900px',
                 height: '670px',
                 display: 'flex',
             }}>
@@ -274,10 +274,10 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                 {/* Product 1 with "NEW" badge */}
                 <div style={{
                     position: 'absolute',
-                    top: '10px',
-                    left: '30px',
-                    width: '320px',
-                    height: '320px',
+                    top: '20px',
+                    left: '80px',
+                    width: '350px',
+                    height: '350px',
                     transform: 'rotate(-8deg)',
                     border: '6px solid #fff',
                     borderRadius: '15px',
@@ -291,7 +291,7 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                         objectFit: 'cover',
                         borderRadius: '8px'
                     }} />
-                    {/* NEW Badge */}
+                    {/* HOT Badge */}
                     <div style={{
                         position: 'absolute',
                         top: '-15px',
@@ -309,17 +309,17 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                         fontFamily: 'BeVietnamPro',
                         boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
                     }}>
-                        NEW
+                        HOT
                     </div>
                 </div>
 
                 {/* Product 2 with "SALE" badge */}
                 <div style={{
                     position: 'absolute',
-                    top: '20px',
-                    right: '10px',
-                    width: '340px',
-                    height: '300px',
+                    top: '30px',
+                    right: '80px',
+                    width: '370px',
+                    height: '330px',
                     transform: 'rotate(5deg)',
                     border: '6px solid #fff',
                     borderRadius: '15px',
@@ -333,7 +333,7 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                         objectFit: 'cover',
                         borderRadius: '8px'
                     }} />
-                    {/* SALE Badge */}
+                    {/* HOT Badge */}
                     <div style={{
                         position: 'absolute',
                         top: '-15px',
@@ -351,17 +351,17 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                         fontFamily: 'BeVietnamPro',
                         boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
                     }}>
-                        50% OFF
+                        HOT
                     </div>
                 </div>
 
                 {/* Product 3 */}
                 <div style={{
                     position: 'absolute',
-                    bottom: '150px',
-                    left: '10px',
-                    width: '300px',
-                    height: '280px',
+                    bottom: '30px',
+                    left: '60px',
+                    width: '330px',
+                    height: '310px',
                     transform: 'rotate(3deg)',
                     border: '6px solid #fff',
                     borderRadius: '15px',
@@ -375,15 +375,35 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                         objectFit: 'cover',
                         borderRadius: '8px'
                     }} />
+                    {/* HOT Badge */}
+                    <div style={{
+                        position: 'absolute',
+                        top: '-15px',
+                        right: '-15px',
+                        backgroundColor: '#f39c12',
+                        color: '#fff',
+                        borderRadius: '50%',
+                        width: '50px',
+                        height: '50px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontSize: '12px',
+                        fontWeight: '800',
+                        fontFamily: 'BeVietnamPro',
+                        boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+                    }}>
+                        HOT
+                    </div>
                 </div>
 
                 {/* Product 4 with "HOT" badge */}
                 <div style={{
                     position: 'absolute',
-                    bottom: '20px',
-                    right: '20px',
-                    width: '320px',
-                    height: '300px',
+                    bottom: '40px',
+                    right: '100px',
+                    width: '350px',
+                    height: '330px',
                     transform: 'rotate(-3deg)',
                     border: '6px solid #fff',
                     borderRadius: '15px',
