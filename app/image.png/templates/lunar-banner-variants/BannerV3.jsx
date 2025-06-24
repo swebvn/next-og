@@ -155,6 +155,7 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                     marginBottom: '20px',
                     textTransform: 'uppercase',
                     letterSpacing: '-2px',
+                    lineHeight: '1.4',
                 }}>
                     ✨ {text_1} ✨
                 </h1>
@@ -196,6 +197,7 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                     display: 'flex',
                     gap: '15px',
                     alignItems: 'center',
+                    marginTop: '50px',
                 }}>
                     <div style={{
                         backgroundColor: '#FF6B35',
