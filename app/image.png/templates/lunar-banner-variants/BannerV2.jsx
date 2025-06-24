@@ -62,7 +62,7 @@ export default function BannerV2({ image_1, image_2, image_3, image_4, text_1, t
                     style={{
                         fontFamily: 'BeVietnamPro',
                         color: '#fdefd2',
-                        fontSize: '30px',
+                        fontSize: '25px',
                         backgroundColor: '#4c3408',
                         padding: '10px 20px',
                         borderRadius: '10px',
