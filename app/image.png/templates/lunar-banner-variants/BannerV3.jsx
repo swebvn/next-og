@@ -126,7 +126,7 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
             }}>
                 {/* Brand Badge */}
                 <div style={{
-                    backgroundColor: '#2c3e50',
+                    backgroundColor: 'red',
                     color: '#ffffff',
                     padding: '12px 12px',
                     borderRadius: '20px',
@@ -137,10 +137,12 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                     textTransform: 'uppercase',
                     letterSpacing: '1px',
                     display: 'flex',
+                    width:  '210px',
                     alignItems: 'center',
+                    alignContent: 'center',
                     whiteSpace: 'nowrap',
                 }}>
-                    🎯 PREMIUM COLLECTION
+                    PREMIUM COLLECTION
                 </div>
                 {/* Main Title */}
                 <h1 style={{
