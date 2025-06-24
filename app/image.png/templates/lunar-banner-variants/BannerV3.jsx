@@ -146,7 +146,7 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                 <h1 style={{
                     fontFamily: 'BeVietnamPro',
                     color: '#ffffff',
-                    fontSize: '72px',
+                    fontSize: '48px',
                     fontWeight: '900',
                     textShadow: '4px 4px 12px rgba(0,0,0,0.8), 0 0 20px rgba(255,215,0,0.5)',
                     lineHeight: '0.9',
