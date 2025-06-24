@@ -47,30 +47,41 @@ export default function BannerV2({ image_1, image_2, image_3, image_4, text_1, t
             <div tw="absolute w-full h-full object-cover flex flex-col items-center  justify-center">
                 <img src={bg_image} tw="w-full h-full" />
             </div>
-            <h1 tw="text-center absolute"
+
+            {/* Text Container */}
+            <div tw="absolute flex flex-col items-center justify-center"
                 style={{
-                    fontFamily: 'BeVietnamPro',
-                    color: '#fdefd2',
-                    top: '220px',
-                    left: '75%',
-                    fontSize: '60px',
-                    fontWeight: '700',
+                    top: '250px',
+                    left: '1470px',
                     transform: 'translateX(-50%) translateY(-50%)',
                     maxWidth: '820px',
-                }}
-            >{text_1}</h1>
-            <h3 tw="text-center absolute justify-center font-normal"
-                style={{
-                    fontFamily: 'BeVietnamPro',
-                    color: '#fdefd2',
-                    top: '100px',
-                    left: '75%',
-                    fontSize: '30px',
-                    transform: 'translateX(-50%) translateY(-50%)',
-                    backgroundColor: '#4c3408',
-                    padding: '10px 20px',
-                    borderRadius: '10px',
-                }}>{text_2}</h3>
+                }}>
+
+                {/* Subtitle (text_2) */}
+                <h3 tw="text-center font-normal flex items-center"
+                    style={{
+                        fontFamily: 'BeVietnamPro',
+                        color: '#fdefd2',
+                        fontSize: '30px',
+                        backgroundColor: '#4c3408',
+                        padding: '10px 20px',
+                        borderRadius: '10px',
+                        textAlign: 'center',
+                        marginBottom: '20px',
+                    }}>{text_2}</h3>
+
+                {/* Main Title (text_1) */}
+                <h1 tw="text-center flex justify-center items-center"
+                    style={{
+                        fontFamily: 'BeVietnamPro',
+                        color: '#fdefd2',
+                        fontSize: '60px',
+                        fontWeight: '700',
+                        textAlign: 'center',
+                        textTransform: 'uppercase',
+                    }}
+                >{text_1}</h1>
+            </div>
         </div>
     );
 }
