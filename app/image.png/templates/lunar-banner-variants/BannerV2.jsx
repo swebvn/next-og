@@ -51,7 +51,7 @@ export default function BannerV2({ image_1, image_2, image_3, image_4, text_1, t
             {/* Text Container */}
             <div tw="absolute flex flex-col items-center justify-center"
                 style={{
-                    top: '250px',
+                    top: '225px',
                     left: '1470px',
                     transform: 'translateX(-50%) translateY(-50%)',
                     maxWidth: '820px',
@@ -73,6 +73,7 @@ export default function BannerV2({ image_1, image_2, image_3, image_4, text_1, t
                 {/* Main Title (text_1) */}
                 <h1 tw="text-center flex justify-center items-center"
                     style={{
+                        marginTop: '50px',
                         fontFamily: 'BeVietnamPro',
                         color: '#fdefd2',
                         fontSize: '60px',
