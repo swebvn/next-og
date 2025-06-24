@@ -9,7 +9,7 @@ export default function mockup_banner_lunar({ params }) {
     const text_2 = params.get('text_2') || 'Shop the latest merchandise products';
 
     const variants = Object.keys(BANNER_VARIANTS)
-        .filter(v => ['v2', 'v3'].includes(v))
+        .filter(v => ['v2'].includes(v))
         ;
     const variant = params.get('variant') || variants[Math.floor(Math.random() * variants.length)];
 
