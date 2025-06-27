@@ -22,7 +22,8 @@ const LAYOUTS = {
     DIAGONAL: 'diagonal',
     STACKED: 'stacked',
     SPLIT: 'split',
-    GRADIENT: 'gradient'
+    GRADIENT: 'gradient',
+    BLACK_BORDER: 'black_border'
 };
 
 // Export for reuse in other components
@@ -38,6 +39,21 @@ const createNeonStyle = (color) => ({
         0 0 4px ${color},
         0 0 6px ${color},
         0 0 10px ${color}
+    `
+});
+
+const createBlackBorderStyle = (color) => ({
+    color: color,
+    WebkitTextStroke: '2px #000000',
+    textShadow: `
+        2px 2px 0px #000000,
+        -2px -2px 0px #000000,
+        2px -2px 0px #000000,
+        -2px 2px 0px #000000,
+        0px 2px 0px #000000,
+        2px 0px 0px #000000,
+        0px -2px 0px #000000,
+        -2px 0px 0px #000000
     `
 });
 
@@ -195,6 +211,18 @@ const GradientLayout = ({ keyword, titleStyle, color }) => (
     </div>
 );
 
+const BlackBorderLayout = ({ keyword, titleStyle, color }) => (
+    <div tw="mx-auto flex items-center text-3xl uppercase max-w-[450px]">
+        <div tw="pr-2 word-wrap text-right text-4xl" style={titleStyle}>
+            {keyword}
+        </div>
+        <div tw="pl-2 flex flex-col items-start text-white border-l-2 border-white font-bold">
+            <span style={createBlackBorderStyle('#ffffff')}>FANS</span>
+            <span style={createBlackBorderStyle('#ffffff')}>MERCH</span>
+        </div>
+    </div>
+);
+
 const layoutComponents = {
     [LAYOUTS.DEFAULT]: DefaultLayout,
     [LAYOUTS.VERTICAL]: VerticalLayout,
@@ -202,14 +230,15 @@ const layoutComponents = {
     [LAYOUTS.DIAGONAL]: DiagonalLayout,
     [LAYOUTS.STACKED]: StackedLayout,
     [LAYOUTS.SPLIT]: SplitLayout,
-    [LAYOUTS.GRADIENT]: GradientLayout
+    [LAYOUTS.GRADIENT]: GradientLayout,
+    [LAYOUTS.BLACK_BORDER]: BlackBorderLayout
 };
 
 export default function LunarLogo({ params }) {
     const keyword = params.get('text') || 'The Lucommerce';
     const variant = params.get('variant') || getRandomItem(Object.values(LAYOUTS));
     const color = getRandomItem(Object.values(COLORS));
-    const titleStyle = createNeonStyle(color);
+    const titleStyle = variant === LAYOUTS.BLACK_BORDER ? createBlackBorderStyle(color) : createNeonStyle(color);
 
     const SelectedLayout = layoutComponents[variant] || layoutComponents[LAYOUTS.DEFAULT];
 
