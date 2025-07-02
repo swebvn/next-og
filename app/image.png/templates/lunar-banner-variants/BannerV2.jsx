@@ -76,7 +76,7 @@ export default function BannerV2({ image_1, image_2, image_3, image_4, text_1, t
                         marginTop: '50px',
                         fontFamily: 'BeVietnamPro',
                         color: '#fdefd2',
-                        fontSize: '60px',
+                        fontSize: '50px',
                         fontWeight: '700',
                         textAlign: 'center',
                         textTransform: 'uppercase',
