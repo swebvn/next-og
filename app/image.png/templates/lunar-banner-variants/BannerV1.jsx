@@ -55,6 +55,7 @@ export default function BannerV1({ image_1, image_2, image_3, image_4, text_1, t
                     left: '50%',
                     fontSize: '60px',
                     fontWeight: '700',
+                    maxWidth: '1200px',
                     transform: 'translateX(-50%) translateY(-50%)',
                 }}
             >{text_1}</h1>
