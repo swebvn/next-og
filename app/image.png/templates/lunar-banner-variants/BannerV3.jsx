@@ -120,7 +120,7 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                 position: 'absolute',
                 top: '100px',
                 left: '80px',
-                width: '600px',
+                width: '696px',
                 display: 'flex',
                 flexDirection: 'column',
             }}>
@@ -197,7 +197,7 @@ export default function BannerV3({ image_1, image_2, image_3, image_4, text_1, t
                     display: 'flex',
                     gap: '15px',
                     alignItems: 'center',
-                    marginTop: '50px',
+                    marginTop: '30px',
                 }}>
                     <div style={{
                         backgroundColor: '#FF6B35',
