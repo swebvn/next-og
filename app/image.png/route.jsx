@@ -53,6 +53,8 @@ import Theme_2_bag from './templates/theme-lunar-2-bag';
 import Theme_2_mug from './templates/theme-lunar-2-mug';
 import Theme_2_hoodie from './templates/theme-lunar-2-hoodie';
 import Theme_2_sweatshirt from './templates/theme-lunar-2-sweatshirt';
+import Lachai from "./templates/lachai";
+
 export const runtime = 'edge';
 
 async function loadGoogleFont (font, text) {
@@ -698,7 +700,17 @@ export async function GET(request) {
       } ]
     });
   }
-
+  if (template === 'lachai') {
+    return new ImageResponse(<Lachai params={searchParams} />, {
+      width: 500,
+      height: 800,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam,
+        style: "normal",
+      } ]
+    });
+  }
 
   return new Response('Template not found', { status: 404 });
 }
