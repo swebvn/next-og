@@ -53,6 +53,7 @@ import Theme_2_bag from './templates/theme-lunar-2-bag';
 import Theme_2_mug from './templates/theme-lunar-2-mug';
 import Theme_2_hoodie from './templates/theme-lunar-2-hoodie';
 import Theme_2_sweatshirt from './templates/theme-lunar-2-sweatshirt';
+import ComboImage from './templates/genesis-portal/ComboImage';
 export const runtime = 'edge';
 
 async function loadGoogleFont (font, text) {
@@ -696,6 +697,12 @@ export async function GET(request) {
         data: fontBeVietnam,
         style: "normal",
       } ]
+    });
+  }
+  if (template === 'portal-combo-image') {
+    return new ImageResponse(<ComboImage params={searchParams} />, {
+      width: 500,
+      height: 500,
     });
   }
 
