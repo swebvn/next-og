@@ -13,13 +13,13 @@ export default function VipComboImage({ params }) {
       .split(",")
       .map(url => {
         const cleanUrl = url.replace(/^https?:\/\//, "");
-        return `http://remove-bg.tdagroup.online/${cleanUrl}`;
+        return `https://remove-bg.tdagroup.online/${cleanUrl}`;
       })
   : [
-      "http://remove-bg.tdagroup.online/aihkfac.skymage.net/v1/genesis-portal.b-cdn.net/media/3600/01K6FM72NENHRX94Y4KYSCQKRR.jpg?w=500",
-      "http://remove-bg.tdagroup.online/aihkfac.skymage.net/v1/genesis-portal.b-cdn.net/media/3602/01K6FM72NFNETSQDGV4TH8AJ97.jpg?w=500",
-      "http://remove-bg.tdagroup.online/aihkfac.skymage.net/v1/genesis-portal.b-cdn.net/media/3604/01K6FM72NGZ9AVJ9KEFTFMMRJQ.jpg?w=500",
-      "http://remove-bg.tdagroup.online/aihkfac.skymage.net/v1/genesis-portal.b-cdn.net/media/3606/01K6FM72NJR48YHXM9ADSBQWZF.jpg?w=500",
+      "https://remove-bg.tdagroup.online/aihkfac.skymage.net/v1/genesis-portal.b-cdn.net/media/3600/01K6FM72NENHRX94Y4KYSCQKRR.jpg?w=500",
+      "https://remove-bg.tdagroup.online/aihkfac.skymage.net/v1/genesis-portal.b-cdn.net/media/3602/01K6FM72NFNETSQDGV4TH8AJ97.jpg?w=500",
+      "https://remove-bg.tdagroup.online/aihkfac.skymage.net/v1/genesis-portal.b-cdn.net/media/3604/01K6FM72NGZ9AVJ9KEFTFMMRJQ.jpg?w=500",
+      "https://remove-bg.tdagroup.online/aihkfac.skymage.net/v1/genesis-portal.b-cdn.net/media/3606/01K6FM72NJR48YHXM9ADSBQWZF.jpg?w=500",
     ];
   const backgroundImage = params.get("background") || "https://images.unsplash.com/photo-1729575846511-f499d2e17d79?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
   const title = params.get("title") || "CONTENT HERE";
