@@ -701,11 +701,9 @@ export async function GET(request) {
   }
   if (template === 'portal-combo-image') {
     return new ImageResponse(<ComboImage params={searchParams} />, {
-      width: 500,
-      height: 500,
+      width: 1024,
+      height: 1024,
     });
   }
-
-
   return new Response('Template not found', { status: 404 });
 }
