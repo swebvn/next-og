@@ -1,10 +1,4 @@
 // ComboImage.jsx
-import { Poppins } from "next/font/google";
-
-const titleFont = Poppins({
-  subsets: ["devanagari"],
-  weight: ["700"], 
-});
 
 export default function VipComboImage({ params }) {
   const scale = 1024 / 500; // ~2.048
@@ -165,7 +159,6 @@ export default function VipComboImage({ params }) {
           }}
         >
           <h1
-            className={titleFont.className}
             style={{
               fontSize: `${20 * scale}px`,
               textAlign: "center",

@@ -703,6 +703,12 @@ export async function GET(request) {
     return new ImageResponse(<ComboImage params={searchParams} />, {
       width: 1024,
       height: 1024,
+      fonts: [{
+        name: "BeVietnamPro",
+        data: fontBeVietnam,
+        style: "normal",
+        weight: 800, // Set a higher weight here
+      }]
     });
   }
   return new Response('Template not found', { status: 404 });
