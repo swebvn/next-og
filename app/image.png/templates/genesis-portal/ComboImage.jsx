@@ -22,7 +22,7 @@ export default function VipComboImage({ params }) {
       "https://remove-bg.tdagroup.online/aihkfac.skymage.net/v1/genesis-portal.b-cdn.net/media/3606/01K6FM72NJR48YHXM9ADSBQWZF.jpg?w=500",
     ];
   const backgroundImage = params.get("background") || "https://images.unsplash.com/photo-1729575846511-f499d2e17d79?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-  const title = params.get("title") || "CONTENT HERE";
+  const title = params.get("title") || "CHOOSE YOUR OPTION";
   const startIndex = params.get("start_index")
   ? parseInt(params.get("start_index"), 10) - 1
   : 0;
