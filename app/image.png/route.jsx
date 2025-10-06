@@ -54,6 +54,9 @@ import Theme_2_mug from './templates/theme-lunar-2-mug';
 import Theme_2_hoodie from './templates/theme-lunar-2-hoodie';
 import Theme_2_sweatshirt from './templates/theme-lunar-2-sweatshirt';
 import ComboImage from './templates/genesis-portal/ComboImage';
+import ComboImage2 from './templates/genesis-portal/ComboImage2';
+import ComboImage3 from './templates/genesis-portal/ComboImage3';
+import ComboImage4 from './templates/genesis-portal/ComboImage4';
 export const runtime = 'edge';
 
 async function loadGoogleFont (font, text) {
@@ -699,15 +702,56 @@ export async function GET(request) {
       } ]
     });
   }
+
+  const [fontGreatVibes, fontPacifico, fontRobotoSlab, fontLobster] = await Promise.all([
+    fetch(new URL('../../assets/fonts/GreatVibes-Regular.woff', import.meta.url)).then(res => res.arrayBuffer()),
+    fetch(new URL('../../assets/fonts/Pacifico-Regular.woff', import.meta.url)).then(res => res.arrayBuffer()),
+    fetch(new URL('../../assets/fonts/RobotoSlab-Regular.woff', import.meta.url)).then(res => res.arrayBuffer()),
+    fetch(new URL('../../assets/fonts/Lobster-Regular.woff', import.meta.url)).then(res => res.arrayBuffer())
+  ]);
+
   if (template === 'portal-combo-image') {
     return new ImageResponse(<ComboImage params={searchParams} />, {
       width: 1024,
       height: 1024,
       fonts: [{
-        name: "BeVietnamPro",
+        name: "font",
         data: fontBeVietnam,
-        style: "normal",
+        style: "bold",
         weight: 800, // Set a higher weight here
+      }]
+    });
+  }
+  if (template === 'portal-combo-image-2') {
+    return new ImageResponse(<ComboImage2 params={searchParams} />, {
+      width: 1024,
+      height: 1024,
+      fonts: [{
+        name: "font",
+        data: fontLobster,
+        weight: 400,
+      }]
+    });
+  }
+  if (template === 'portal-combo-image-3') {
+    return new ImageResponse(<ComboImage3 params={searchParams} />, {
+      width: 1024,
+      height: 1024,
+      fonts: [{
+        name: "font",
+        data: fontPacifico,
+        weight: 400,
+      }]
+    });
+  }
+  if (template === 'portal-combo-image-4') {
+    return new ImageResponse(<ComboImage4 params={searchParams} />, {
+      width: 1024,
+      height: 1024,
+      fonts: [{
+        name: "font",
+        data: fontPacifico,
+        weight: 400,
       }]
     });
   }

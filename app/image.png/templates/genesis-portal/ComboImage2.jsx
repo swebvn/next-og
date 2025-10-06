@@ -1,6 +1,6 @@
 // ComboImage.jsx
 
-export default function ComboImage({ params }) {
+export default function ComboImage2({ params }) {
   const scale = 1024 / 500; // ~2.048
   const imageUrls = params.get("images")
   ? params.get("images")
@@ -17,8 +17,8 @@ export default function ComboImage({ params }) {
       "https://remove-bg.tdagroup.online/aihkfac.skymage.net/v1/genesis-portal.b-cdn.net/media/4695/01K6TJZA39TK1WSJHX791S7VTB.jpg?w=500",
       "https://remove-bg.tdagroup.online/aihkfac.skymage.net/v1/genesis-portal.b-cdn.net/media/4698/01K6TJZA3B1MW0T3Y4M5QJJGWV.jpg?w=500",
     ];
-  const backgroundImage = params.get("background") || "https://images.unsplash.com/photo-1729575846511-f499d2e17d79?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-  const title = (params.get("title") || "CHOOSE YOUR OPTION").toUpperCase();
+  const backgroundImage = params.get("background") || "https://genesis-portal.b-cdn.net/media/5096/01K6X4CS46GRQ5V99KB3C9BV8B.png";
+  const title = params.get("title") || "Choose Your Option";
   const startIndex = params.get("start_index")
   ? parseInt(params.get("start_index"), 10) - 1
   : 0;
@@ -52,15 +52,15 @@ export default function ComboImage({ params }) {
         bottom: `${10 * scale}px`,   // thay top -> bottom
         right: `${0 * scale}px`,   // thay left -> right
         transform: "translateX(-50%)",
-        backgroundColor: "rgba(0, 0, 0, 0.7)", 
-        color: "white", 
+        /* backgroundColor: "rgba(0, 0, 0, 0.7)",  */
+        color: "#043671", 
         borderRadius: "50%", 
         width: `${30 * scale}px`, 
         height: `${30 * scale}px`, 
         display: "flex", 
         alignItems: "center", 
         justifyContent: "center",
-        fontSize: `${14 * scale}px`,
+        fontSize: `${18 * scale}px`,
         fontWeight: "bold"
       }}>
         {index + 1 + startIndex}
@@ -162,11 +162,12 @@ export default function ComboImage({ params }) {
         >
           <h1
             style={{
-              fontSize: `${20 * scale}px`,
+              fontSize: `${30 * scale}px`,
               textAlign: "center",
               padding: `${8 * scale}px ${16 * scale}px`,
               borderRadius: `${8 * scale}px`,
-              color: "#fff",
+              color: "#043671",
+              letterSpacing: '5px',
               textShadow: "2px 2px 4px rgba(0,0,0,0.6)",
             }}
           >
