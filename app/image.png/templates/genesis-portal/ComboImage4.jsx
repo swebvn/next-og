@@ -45,24 +45,22 @@ export default function ComboImage4({ params }) {
             objectFit: "contain"
           }}
         />
-        <div style={{ 
-          position: "absolute", 
-  /*         top: `${10 * scale}px`, 
-          left: "50%",  */
-          bottom: `${10 * scale}px`,   // thay top -> bottom
-          right: `${0 * scale}px`,   // thay left -> right
-          transform: "translateX(-50%)",
-          backgroundColor: "rgba(0, 0, 0, 0.7)", 
-          color: "#fff", 
-          borderRadius: "50%", 
-          width: `${30 * scale}px`, 
-          height: `${30 * scale}px`, 
-          display: "flex", 
-          alignItems: "center", 
-          justifyContent: "center",
-          fontSize: `${18 * scale}px`,
-          fontWeight: "bold"
-        }}>
+    <div style={{ 
+      position: "absolute", 
+      bottom: `${10 * scale}px`, 
+      right: `${10 * scale}px`, 
+      width: `${42 * scale}px`, 
+      height: `${42 * scale}px`, 
+      background: "#FFCC00", 
+      clipPath: "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)",
+      display: "flex", 
+      alignItems: "center", 
+      justifyContent: "center",
+      fontSize: `${16 * scale}px`,
+      fontWeight: "bold",
+      color: "#043671",
+      textShadow: "1px 1px 2px rgba(0,0,0,0.6)"
+    }}>
           {index + 1 + startIndex}
         </div>
       </div>

@@ -750,8 +750,8 @@ export async function GET(request) {
       height: 1024,
       fonts: [{
         name: "font",
-        data: fontPacifico,
-        weight: 400,
+        data: fontRobotoSlab,
+        weight: 800,
       }]
     });
   }
