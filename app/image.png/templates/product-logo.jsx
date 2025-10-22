@@ -3,7 +3,7 @@ export default function ProductLogo({ params }) {
     const logo = params.get('logo') || 'https://placehold.co/200x70.png';
 
     return (
-        <div tw="size-full flex p-10">
+        <div tw="size-full flex p-10 bg-white">
             <div tw="relative flex size-full border border-4 border-black">
                 <img src={image} tw="size-full" />
 
