@@ -4,7 +4,8 @@ export function removeBackgroundUrl(url) {
     const urlObject = new URL(url);
     const host = urlObject.host;
     const path = urlObject.pathname;
-    const newUrl = `https://remove-bg.customedge.co/${host}${path}`;
+    const search = urlObject.search;
+    const newUrl = `https://remove-bg.tdagroup.co/${host}${path}${search}`;
 
     return newUrl;
 }
