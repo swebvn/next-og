@@ -57,6 +57,7 @@ import ComboImage from './templates/genesis-portal/ComboImage';
 import ComboImage2 from './templates/genesis-portal/ComboImage2';
 import ComboImage3 from './templates/genesis-portal/ComboImage3';
 import ComboImage4 from './templates/genesis-portal/ComboImage4';
+
 export const runtime = 'edge';
 
 async function loadGoogleFont (font, text) {
@@ -74,686 +75,417 @@ async function loadGoogleFont (font, text) {
   throw new Error('failed to load font data')
 }
 
+// Template configuration mapping
+const TEMPLATE_CONFIG = {
+  'lunar-logo': {
+    component: LunarLogo,
+    width: 500,
+    height: 200,
+    fontType: 'outfit',
+  },
+  'lunar-collection': {
+    component: LunarCollection,
+    width: 500,
+    height: 500,
+  },
+  'demo': {
+    component: Demo,
+    width: 800,
+    height: 600,
+  },
+  'tung': {
+    component: Tung,
+    width: 1500,
+    height: 1500,
+    fontType: 'beVietnam',
+  },
+  'charm': {
+    component: Charm,
+    width: 1500,
+    height: 1500,
+    fontType: 'beVietnam',
+  },
+  'duc-template1': {
+    component: Duc_template1,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'duc-template2': {
+    component: Duc_template2,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'duc-template3': {
+    component: Duc_template3,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'duc-template4': {
+    component: Duc_template4,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'duc-template5': {
+    component: Duc_template5,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'duc-template6': {
+    component: Duc_template6,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'duc-template7': {
+    component: Duc_template7,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'il-mkt': {
+    component: InsurlinkMarketing,
+    width: 500,
+    height: 500,
+  },
+  'mk-auto-mail': {
+    component: MailcookAutomationMail,
+    width: 1748,
+    height: 1240,
+  },
+  'mockup-lunar1': {
+    component: Mockup_lunar1,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-hoodie': {
+    component: Mockup_hoodie,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-tanktop-male': {
+    component: Mockup_tanktop_male,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-mousepad-s1': {
+    component: Mockup_mousepad_s1,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-sweatshirt': {
+    component: Mockup_sweatshirt,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-poster': {
+    component: Mockup_poster,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-bag': {
+    component: Mockup_bag,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-cap': {
+    component: Mockup_cap,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-dress': {
+    component: Mockup_dress,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-mug': {
+    component: Mockup_mug,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-pillow-white': {
+    component: Mockup_pillow_white,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-hat': {
+    component: Mockup_hat,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-facemask': {
+    component: Mockup_facemask,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-mousepad-s2': {
+    component: Mockup_mousepad_s2,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-notebook-black': {
+    component: Mockup_notebook_black,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-notebook-white': {
+    component: Mockup_notebook_white,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-phone-case': {
+    component: Mockup_phone_case,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-pillow-cover-black': {
+    component: Mockup_pillow_cover_black,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-pin': {
+    component: Mockup_pin,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-shirt-black': {
+    component: Mockup_shirt_black,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-shirt-white': {
+    component: Mockup_shirt_white,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-tanktop-female': {
+    component: Mockup_tanktop_female,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-tapestries': {
+    component: Mockup_tapestries,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-zipper-pouch-black': {
+    component: Mockup_zipper_pouch_black,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-zipper-pouch-white': {
+    component: Mockup_zipper_pouch_white,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-banner-lunar': {
+    component: Mockup_banner_lunar,
+    width: 1920,
+    height: 730,
+    fontType: 'beVietnam',
+  },
+  'mockup-mug-type-2': {
+    component: Mockup_mug_type_2,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-hoodie-black': {
+    component: Mockup_hoodie_black,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-sweatshirt-black': {
+    component: Mockup_sweatshirt_black,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-shirt-type-2-black': {
+    component: Mockup_shirt_type_2_black,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-shirt-type-2-white': {
+    component: Mockup_shirt_type_2_white,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-demo1': {
+    component: Mockup_demo_01,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-demo2': {
+    component: Mockup_demo_02,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'mockup-demo3': {
+    component: Mockup_demo_03,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'theme-lunar-2-collection': {
+    component: Theme_2_collection,
+    width: 500,
+    height: 500,
+    fontType: 'beVietnam',
+  },
+  'theme-lunar-2-pillow': {
+    component: Theme_2_pillow,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'theme-lunar-2-bag': {
+    component: Theme_2_bag,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'theme-lunar-2-mug': {
+    component: Theme_2_mug,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'theme-lunar-2-hoodie': {
+    component: Theme_2_hoodie,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'theme-lunar-2-sweatshirt': {
+    component: Theme_2_sweatshirt,
+    width: 1000,
+    height: 1000,
+    fontType: 'beVietnam',
+  },
+  'portal-combo-image': {
+    component: ComboImage,
+    width: 1024,
+    height: 1024,
+    fontType: 'beVietnam',
+    fontWeight: 800,
+    fontStyle: 'bold',
+  },
+  'portal-combo-image-2': {
+    component: ComboImage2,
+    width: 1024,
+    height: 1024,
+    fontType: 'lobster',
+  },
+  'portal-combo-image-3': {
+    component: ComboImage3,
+    width: 1024,
+    height: 1024,
+    fontType: 'pacifico',
+  },
+  'portal-combo-image-4': {
+    component: ComboImage4,
+    width: 1024,
+    height: 1024,
+    fontType: 'robotoSlab',
+  },
+};
+
 export async function GET(request) {
-  const { searchParams, host } = new URL(request.url);
+  const { searchParams } = new URL(request.url);
   const template = searchParams.get('template');
 
-  if (template === 'lunar-logo') {
-    return new ImageResponse(<LunarLogo params={searchParams} />, {
-      width: 500,
-      height: 200,
-      fonts: [
-        {
-          name: 'Outfit',
-          data: await loadGoogleFont('Outfit', 'FANS MERCH'),
-          weight: 500,
-          style: 'normal',
-        }
-      ]
-    });
-  }
-
-  if (template === 'lunar-collection') {
-    return new ImageResponse(<LunarCollection params={searchParams} />, {
-        width: 500,
-        height: 500,
-    });
-  }
-
-  if (template === 'demo') {
-    return new ImageResponse(<Demo params={searchParams} />, { width: 800, height: 600 });
-  }
-
+  // Load fonts
   const fontBeVietnam = await fetch(
     new URL('../../assets/fonts/BeVietnamPro-Medium.woff', import.meta.url)
   ).then(res => res.arrayBuffer());
 
-  if (template === 'tung') {
-    return new ImageResponse(<Tung params={searchParams} />, {
-      width: 1500,
-      height: 1500,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'charm') {
-    return new ImageResponse(<Charm params={searchParams} />, {
-      width: 1500,
-      height: 1500,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'duc-template1') {
-    return new ImageResponse(<Duc_template1 params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'duc-template2') {
-    return new ImageResponse(<Duc_template2 params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'duc-template3') {
-    return new ImageResponse(<Duc_template3 params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-  if (template === 'duc-template4') {
-    return new ImageResponse(<Duc_template4 params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-  if (template === 'duc-template5') {
-    return new ImageResponse(<Duc_template5 params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-  if (template === 'duc-template6') {
-    return new ImageResponse(<Duc_template6 params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-  if (template === 'duc-template7') {
-    return new ImageResponse(<Duc_template7 params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'il-mkt') {
-    return new ImageResponse(<InsurlinkMarketing params={searchParams} />, {
-      width: 500,
-      height: 500,
-    });
-  }
-
-  if (template === 'mk-auto-mail') {
-    return new ImageResponse(<MailcookAutomationMail params={searchParams} />, {
-      width: 1748,
-      height: 1240,
-    });
-  }
-
-  if (template === 'mockup-lunar1') {
-    return new ImageResponse(<Mockup_lunar1 params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-hoodie') {
-    return new ImageResponse(<Mockup_hoodie params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-tanktop-male') {
-    return new ImageResponse(<Mockup_tanktop_male params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-mousepad-s1') {
-    return new ImageResponse(<Mockup_mousepad_s1 params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-sweatshirt') {
-    return new ImageResponse(<Mockup_sweatshirt params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-poster') {
-    return new ImageResponse(<Mockup_poster params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-bag') {
-    return new ImageResponse(<Mockup_bag params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-cap') {
-    return new ImageResponse(<Mockup_cap params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-dress') {
-    return new ImageResponse(<Mockup_dress params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-mug') {
-    return new ImageResponse(<Mockup_mug params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-pillow-white') {
-    return new ImageResponse(<Mockup_pillow_white params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-hat') {
-    return new ImageResponse(<Mockup_hat params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-facemask') {
-    return new ImageResponse(<Mockup_facemask params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-mousepad-s2') {
-    return new ImageResponse(<Mockup_mousepad_s2 params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-notebook-black') {
-    return new ImageResponse(<Mockup_notebook_black params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-notebook-white') {
-    return new ImageResponse(<Mockup_notebook_white params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-phone-case') {
-    return new ImageResponse(<Mockup_phone_case params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-pillow-cover-black') {
-    return new ImageResponse(<Mockup_pillow_cover_black params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-pin') {
-    return new ImageResponse(<Mockup_pin params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-shirt-black') {
-    return new ImageResponse(<Mockup_shirt_black params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-shirt-white') {
-    return new ImageResponse(<Mockup_shirt_white params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-tanktop-female') {
-    return new ImageResponse(<Mockup_tanktop_female params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-tapestries') {
-    return new ImageResponse(<Mockup_tapestries params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-zipper-pouch-black') {
-    return new ImageResponse(<Mockup_zipper_pouch_black params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-zipper-pouch-white') {
-    return new ImageResponse(<Mockup_zipper_pouch_white params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-banner-lunar') {
-    return new ImageResponse(<Mockup_banner_lunar params={searchParams} />, {
-      width: 1920,
-      height: 730,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-mug-type-2') {
-    return new ImageResponse(<Mockup_mug_type_2 params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-hoodie-black') {
-    return new ImageResponse(<Mockup_hoodie_black params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-sweatshirt-black') {
-    return new ImageResponse(<Mockup_sweatshirt_black params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-shirt-type-2-black') {
-    return new ImageResponse(<Mockup_shirt_type_2_black params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-shirt-type-2-white') {
-    return new ImageResponse(<Mockup_shirt_type_2_white params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-demo1') {
-    return new ImageResponse(<Mockup_demo_01 params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-demo2') {
-    return new ImageResponse(<Mockup_demo_02 params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'mockup-demo3') {
-    return new ImageResponse(<Mockup_demo_03 params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  if (template === 'theme-lunar-2-collection') {
-    return new ImageResponse(<Theme_2_collection params={searchParams} />, {
-      width: 500,
-      height: 500,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-    if (template === 'theme-lunar-2-pillow') {
-    return new ImageResponse(<Theme_2_pillow params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-    if (template === 'theme-lunar-2-bag') {
-    return new ImageResponse(<Theme_2_bag params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-    if (template === 'theme-lunar-2-mug') {
-    return new ImageResponse(<Theme_2_mug params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-  if (template === 'theme-lunar-2-hoodie') {
-    return new ImageResponse(<Theme_2_hoodie params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-  if (template === 'theme-lunar-2-sweatshirt') {
-    return new ImageResponse(<Theme_2_sweatshirt params={searchParams} />, {
-      width: 1000,
-      height: 1000,
-      fonts: [{
-        name: "BeVietnamPro",
-        data: fontBeVietnam,
-        style: "normal",
-      } ]
-    });
-  }
-
-  const [fontGreatVibes, fontPacifico, fontRobotoSlab, fontLobster] = await Promise.all([
+  const [, fontPacifico, fontRobotoSlab, fontLobster] = await Promise.all([
     fetch(new URL('../../assets/fonts/GreatVibes-Regular.woff', import.meta.url)).then(res => res.arrayBuffer()),
     fetch(new URL('../../assets/fonts/Pacifico-Regular.woff', import.meta.url)).then(res => res.arrayBuffer()),
     fetch(new URL('../../assets/fonts/RobotoSlab-Regular.woff', import.meta.url)).then(res => res.arrayBuffer()),
     fetch(new URL('../../assets/fonts/Lobster-Regular.woff', import.meta.url)).then(res => res.arrayBuffer())
   ]);
 
-  if (template === 'portal-combo-image') {
-    return new ImageResponse(<ComboImage params={searchParams} />, {
-      width: 1024,
-      height: 1024,
-      fonts: [{
-        name: "font",
-        data: fontBeVietnam,
-        style: "bold",
-        weight: 800, // Set a higher weight here
-      }]
+  // Font mapping
+  const fontMap = {
+    'outfit': await loadGoogleFont('Outfit', 'FANS MERCH'),
+    'beVietnam': fontBeVietnam,
+    'pacifico': fontPacifico,
+    'robotoSlab': fontRobotoSlab,
+    'lobster': fontLobster,
+  };
+
+  // Helper function to build font array
+  const buildFonts = (fontType, fontWeight = 400, fontStyle = 'normal') => {
+    if (!fontType) return undefined;
+
+    if (fontType === 'outfit') {
+      return [{
+        name: 'Outfit',
+        data: fontMap.outfit,
+        weight: fontWeight,
+        style: fontStyle,
+      }];
+    }
+
+    return [{
+      name: fontType === 'beVietnam' ? 'BeVietnamPro' : 'font',
+      data: fontMap[fontType],
+      weight: fontWeight,
+      style: fontStyle,
+    }];
+  };
+
+  // Helper function to render template
+  const renderTemplate = (Component, config, fonts) => {
+    return new ImageResponse(<Component params={searchParams} />, {
+      width: config.width,
+      height: config.height,
+      ...(fonts && { fonts }),
     });
+  };
+
+  // Switch case for template routing
+  if (template in TEMPLATE_CONFIG) {
+    const config = TEMPLATE_CONFIG[template];
+    const fonts = buildFonts(config.fontType, config.fontWeight, config.fontStyle);
+    return renderTemplate(config.component, config, fonts);
   }
-  if (template === 'portal-combo-image-2') {
-    return new ImageResponse(<ComboImage2 params={searchParams} />, {
-      width: 1024,
-      height: 1024,
-      fonts: [{
-        name: "font",
-        data: fontLobster,
-        weight: 400,
-      }]
-    });
-  }
-  if (template === 'portal-combo-image-3') {
-    return new ImageResponse(<ComboImage3 params={searchParams} />, {
-      width: 1024,
-      height: 1024,
-      fonts: [{
-        name: "font",
-        data: fontPacifico,
-        weight: 400,
-      }]
-    });
-  }
-  if (template === 'portal-combo-image-4') {
-    return new ImageResponse(<ComboImage4 params={searchParams} />, {
-      width: 1024,
-      height: 1024,
-      fonts: [{
-        name: "font",
-        data: fontRobotoSlab,
-        weight: 800,
-      }]
-    });
-  }
+
   return new Response('Template not found', { status: 404 });
 }
