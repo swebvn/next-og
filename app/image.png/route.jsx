@@ -57,6 +57,7 @@ import ComboImage from './templates/genesis-portal/ComboImage';
 import ComboImage2 from './templates/genesis-portal/ComboImage2';
 import ComboImage3 from './templates/genesis-portal/ComboImage3';
 import ComboImage4 from './templates/genesis-portal/ComboImage4';
+import ProductLogo from './templates/product-logo';
 
 export const runtime = 'edge';
 
@@ -423,6 +424,9 @@ const TEMPLATE_CONFIG = {
     height: 1024,
     fontType: 'robotoSlab',
   },
+  'product-logo': {
+    component: ProductLogo,
+  },
 };
 
 export async function GET(request) {
@@ -474,8 +478,8 @@ export async function GET(request) {
   // Helper function to render template
   const renderTemplate = (Component, config, fonts) => {
     return new ImageResponse(<Component params={searchParams} />, {
-      width: config.width,
-      height: config.height,
+      width: config.width || 1000,
+      height: config.height || 1000,
       ...(fonts && { fonts }),
     });
   };
