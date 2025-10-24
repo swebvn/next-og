@@ -4,7 +4,7 @@ export default function ProductLogo({ params }) {
 
     return (
         <div tw="size-full flex bg-white">
-            <div tw="relative flex size-full border border-8 border-black">
+            <div tw="relative flex size-ful">
                 <img src={image} tw="size-full" />
 
                 <div tw="absolute top-0 right-0 mt-2 mr-2 flex h-[100px]">
