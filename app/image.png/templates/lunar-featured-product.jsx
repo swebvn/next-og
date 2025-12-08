@@ -11,8 +11,12 @@ export default function LunarFeaturedProduct({ params }) {
     .replace(/\b\w/g, (c) => c.toUpperCase());
 
   const backgrounds = [
-    "https://tda-sale-stuff.b-cdn.net/lunar/featured_product_bg_01.jpeg",
-    "https://tda-sale-stuff.b-cdn.net/lunar/featured_product_bg_03.jpeg"
+    /* "https://tda-sale-stuff.b-cdn.net/lunar/featured_product_bg_cta_02.png", */
+    "https://tda-sale-stuff.b-cdn.net/lunar/featured_product_bg_cta_03.png",
+    "https://tda-sale-stuff.b-cdn.net/lunar/featured_product_bg_cta_04.png",
+    "https://tda-sale-stuff.b-cdn.net/lunar/featured_product_bg_cta_05.png",
+    "https://tda-sale-stuff.b-cdn.net/lunar/featured_product_bg_cta_06.png",
+    "https://tda-sale-stuff.b-cdn.net/lunar/featured_product_bg_cta_07.png"
   ];
 
   const bgIndex = params.get("bg_index")
