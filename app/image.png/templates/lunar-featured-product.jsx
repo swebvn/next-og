@@ -4,7 +4,7 @@ export default function LunarFeaturedProduct({ params }) {
     "https://lunar-merch.b-cdn.net/szamerch.shop/media/1194/17781_20251206_114813_mockup.jpg";
 
   const domain = params.get("domain") || "thesmithestore.com";
-  const rawName = params.get("name") || "the cure robert smith cure robert smith hoodies";
+  const rawName = params.get("name") || "Con Meo Meo Cua Hoodie";
 
   const productName = rawName
     .toLowerCase()
@@ -166,11 +166,12 @@ export default function LunarFeaturedProduct({ params }) {
         style={{
           position: "absolute",
           bottom: "60px",
-          left: "65px",
+          left: "60px",
           right: "60px",
           zIndex: 10,
           display: "flex",
-          justifyContent: "center"
+          justifyContent: "center",
+          alignItems: "center"
         }}
       >
         <div
@@ -181,7 +182,7 @@ export default function LunarFeaturedProduct({ params }) {
             textAlign: "center",
             textTransform: "capitalize",
             lineHeight: "1.2",
-            width: "100%",
+            maxWidth: "100%",
             wordWrap: "break-word",
             textShadow:
               "0 0 22px rgba(255,107,53,0.45), 0 0 50px rgba(247,147,30,0.35), 2px 2px 6px rgba(0,0,0,0.35)",
