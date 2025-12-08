@@ -58,6 +58,7 @@ import ComboImage2 from './templates/genesis-portal/ComboImage2';
 import ComboImage3 from './templates/genesis-portal/ComboImage3';
 import ComboImage4 from './templates/genesis-portal/ComboImage4';
 import ProductLogo from './templates/product-logo';
+import LunarFeaturedProduct from './templates/lunar-featured-product';
 
 export const runtime = 'edge';
 
@@ -427,6 +428,12 @@ const TEMPLATE_CONFIG = {
   'product-logo': {
     component: ProductLogo,
   },
+  'lunar-featured-product' : {
+    component: LunarFeaturedProduct,
+    width: 1024,
+    height: 1024,
+    fontType: 'beVietnam',
+  }
 };
 
 export async function GET(request) {
