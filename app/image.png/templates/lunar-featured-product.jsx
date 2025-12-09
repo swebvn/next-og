@@ -163,11 +163,18 @@ export default function LunarFeaturedProduct({ params }) {
             fontSize: `${titleFontSize}px`,
             fontWeight: "900",
             lineHeight: titleLineHeight,
-            color: "#fff",
             textAlign: "center",
-            textShadow:
-              "0 0 22px rgba(255,107,53,.45), 0 0 50px rgba(247,147,30,.35), 2px 2px 6px rgba(0,0,0,.35)",
-            WebkitTextStroke: "2px rgba(0,0,0,.25)"
+            color: "#ffffff",
+
+            WebkitTextStroke: "3px #000",
+
+            textShadow: `
+              -2px -2px 0 #000,
+              2px -2px 0 #000,
+              -2px  2px 0 #000,
+              2px  2px 0 #000,
+              0  0  12px rgba(0,0,0,0.6)
+            `,
           }}
         >
           {productName}
