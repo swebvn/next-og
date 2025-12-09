@@ -4,14 +4,31 @@ export default function LunarFeaturedProduct({ params }) {
     "https://lunar-merch.b-cdn.net/szamerch.shop/media/1194/17781_20251206_114813_mockup.jpg";
 
   const domain = params.get("domain") || "thesmithestore.com";
-  const rawName = params.get("name") || "Con Meo Meo Cua Hoodie";
+
+  const rawName =
+    params.get("name") ||
+    "Dragonball Z Goku Character Men's Pyjamas Short or Long Leg Options";
 
   const productName = rawName
     .toLowerCase()
     .replace(/\b\w/g, (c) => c.toUpperCase());
 
+  const nameLength = productName.length;
+
+  let titleFontSize = 56;
+  let titleLineHeight = 1.15;
+
+  if (nameLength > 42) titleFontSize = 52;
+  if (nameLength > 58) {
+    titleFontSize = 48;
+    titleLineHeight = 1.12;
+  }
+  if (nameLength > 72) {
+    titleFontSize = 44;
+    titleLineHeight = 1.1;
+  }
+
   const backgrounds = [
-    /* "https://tda-sale-stuff.b-cdn.net/lunar/featured_product_bg_cta_02.png", */
     "https://tda-sale-stuff.b-cdn.net/lunar/featured_product_bg_cta_03.png",
     "https://tda-sale-stuff.b-cdn.net/lunar/featured_product_bg_cta_04.png",
     "https://tda-sale-stuff.b-cdn.net/lunar/featured_product_bg_cta_05.png",
@@ -42,13 +59,14 @@ export default function LunarFeaturedProduct({ params }) {
         src={backgroundImage}
         style={{
           position: "absolute",
+          inset: 0,
           width: "100%",
           height: "100%",
           objectFit: "cover"
         }}
       />
 
-      {/* Domain Label */}
+      {/* Domain label */}
       <div
         style={{
           position: "absolute",
@@ -59,97 +77,64 @@ export default function LunarFeaturedProduct({ params }) {
           borderRadius: "24px",
           fontSize: "28px",
           fontWeight: "700",
-          color: "#FFFFFF",
-          background: "linear-gradient(135deg, #FF6B35 0%, #F7931E 100%)"
+          color: "#fff",
+          background: "linear-gradient(135deg,#FF6B35,#F7931E)"
         }}
       >
         {domain}
       </div>
 
-      {/* Multi-layer frame */}
+      {/* Product frame */}
       <div
         style={{
           position: "relative",
           zIndex: 5,
-          marginTop: "40px",
-          marginBottom: "60px",
+          marginTop: "0px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center"
         }}
       >
-        {/* Layer 4 */}
-        <div
-          style={{
-            position: "absolute",
-            width: "650px",
-            height: "650px",
-            borderRadius: "30px",
-            background:
-              "linear-gradient(135deg, rgba(255, 107, 53, 0.28) 0%, rgba(247, 147, 30, 0.22) 100%)",
-            backdropFilter: "blur(10px)",
-            transform: "rotate(-8deg) translate(-15px, 8px)"
-          }}
-        />
+        {/* Decorative layers */}
+        {[
+          "rotate(-8deg) translate(-15px,8px)",
+          "rotate(6deg) translate(12px,5px)",
+          "rotate(-3deg) translate(-6px,3px)"
+        ].map((transform, i) => (
+          <div
+            key={i}
+            style={{
+              position: "absolute",
+              width: "650px",
+              height: "650px",
+              borderRadius: "30px",
+              background:
+                i === 2
+                  ? "linear-gradient(135deg, rgba(255,255,255,.15), rgba(255,255,255,.1))"
+                  : "linear-gradient(135deg, rgba(255,107,53,.28), rgba(247,147,30,.22))",
+              backdropFilter: "blur(12px)",
+              transform
+            }}
+          />
+        ))}
 
-        {/* Layer 3 */}
-        <div
-          style={{
-            position: "absolute",
-            width: "650px",
-            height: "650px",
-            borderRadius: "30px",
-            background:
-              "linear-gradient(135deg, rgba(247, 147, 30, 0.3) 0%, rgba(255, 107, 53, 0.26) 100%)",
-            backdropFilter: "blur(10px)",
-            transform: "rotate(6deg) translate(12px, 5px)"
-          }}
-        />
-
-        {/* Layer 2 */}
-        <div
-          style={{
-            position: "absolute",
-            width: "650px",
-            height: "650px",
-            borderRadius: "30px",
-            background:
-              "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.1) 100%)",
-            backdropFilter: "blur(12px)",
-            transform: "rotate(-3deg) translate(-6px, 3px)"
-          }}
-        />
-
-        {/* Main Frame */}
+        {/* Main frame */}
         <div
           style={{
             width: "650px",
             height: "650px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            position: "relative",
             padding: "22px",
             borderRadius: "30px",
             background:
-              "linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.15) 100%)",
+              "linear-gradient(135deg, rgba(255,255,255,.25), rgba(255,255,255,.15))",
             backdropFilter: "blur(15px)",
-            border: "1px solid rgba(255,255,255,0.3)"
+            border: "1px solid rgba(255,255,255,.3)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            position: "relative"
           }}
         >
-          {/* Inner glow */}
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              borderRadius: "28px",
-              background:
-                "radial-gradient(circle at 50% 50%, rgba(255,255,255,0.16) 0%, transparent 70%)",
-              pointerEvents: "none"
-            }}
-          />
-
-          {/* Product image */}
           <img
             src={productImage}
             style={{
@@ -170,29 +155,24 @@ export default function LunarFeaturedProduct({ params }) {
           right: "60px",
           zIndex: 10,
           display: "flex",
-          justifyContent: "center",
-          alignItems: "center"
+          justifyContent: "center"
         }}
       >
         <div
           style={{
-            fontSize: "56px",
+            fontSize: `${titleFontSize}px`,
             fontWeight: "900",
-            color: "#FFFFFF",
+            lineHeight: titleLineHeight,
+            color: "#fff",
             textAlign: "center",
-            textTransform: "capitalize",
-            lineHeight: "1.2",
-            maxWidth: "100%",
-            wordWrap: "break-word",
             textShadow:
-              "0 0 22px rgba(255,107,53,0.45), 0 0 50px rgba(247,147,30,0.35), 2px 2px 6px rgba(0,0,0,0.35)",
-            WebkitTextStroke: "2px rgba(0,0,0,0.25)"
+              "0 0 22px rgba(255,107,53,.45), 0 0 50px rgba(247,147,30,.35), 2px 2px 6px rgba(0,0,0,.35)",
+            WebkitTextStroke: "2px rgba(0,0,0,.25)"
           }}
         >
           {productName}
         </div>
       </div>
-
     </div>
   );
 }
