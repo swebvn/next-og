@@ -59,6 +59,7 @@ import ComboImage3 from './templates/genesis-portal/ComboImage3';
 import ComboImage4 from './templates/genesis-portal/ComboImage4';
 import ProductLogo from './templates/product-logo';
 import LunarFeaturedProduct from './templates/lunar-featured-product';
+import LunarCollectionV3 from './templates/LunarCollectionV3';
 
 export const runtime = 'edge';
 
@@ -433,7 +434,13 @@ const TEMPLATE_CONFIG = {
     width: 1024,
     height: 1024,
     fontType: 'beVietnam',
-  }
+  },
+  'lunar-collection-v3': {
+    component: LunarCollectionV3,
+    width: 1080,
+    height: 1080,
+    fontType: 'beVietnam',
+  },
 };
 
 export async function GET(request) {
