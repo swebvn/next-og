@@ -61,6 +61,7 @@ import ProductLogo from './templates/product-logo';
 import LunarFeaturedProduct from './templates/lunar-featured-product';
 import LunarCollectionV3 from './templates/LunarCollectionV3';
 import LunarCollectionV4 from './templates/LunarCollectionV4';
+import LunarBannerV4 from './templates/LunarBannerV4';
 
 export const runtime = 'edge';
 
@@ -448,6 +449,12 @@ const TEMPLATE_CONFIG = {
     height: 1080,
     fontType: 'beVietnam',
   },
+  'lunar-banner-v4': {
+    component: LunarBannerV4,
+    width: 1920,
+    height: 730,
+    fontType: 'montserratExtraBold',
+  },
 };
 
 export async function GET(request) {
@@ -459,11 +466,12 @@ export async function GET(request) {
     new URL('../../assets/fonts/BeVietnamPro-Medium.woff', import.meta.url)
   ).then(res => res.arrayBuffer());
 
-  const [, fontPacifico, fontRobotoSlab, fontLobster] = await Promise.all([
+  const [, fontPacifico, fontRobotoSlab, fontLobster, fontMontserratExtraBold] = await Promise.all([
     fetch(new URL('../../assets/fonts/GreatVibes-Regular.woff', import.meta.url)).then(res => res.arrayBuffer()),
     fetch(new URL('../../assets/fonts/Pacifico-Regular.woff', import.meta.url)).then(res => res.arrayBuffer()),
     fetch(new URL('../../assets/fonts/RobotoSlab-Regular.woff', import.meta.url)).then(res => res.arrayBuffer()),
-    fetch(new URL('../../assets/fonts/Lobster-Regular.woff', import.meta.url)).then(res => res.arrayBuffer())
+    fetch(new URL('../../assets/fonts/Lobster-Regular.woff', import.meta.url)).then(res => res.arrayBuffer()),
+    fetch(new URL('../../assets/fonts/Montserrat-ExtraBold.woff', import.meta.url)).then(res => res.arrayBuffer()),
   ]);
 
   // Font mapping
@@ -473,6 +481,7 @@ export async function GET(request) {
     'pacifico': fontPacifico,
     'robotoSlab': fontRobotoSlab,
     'lobster': fontLobster,
+    'montserratExtraBold': fontMontserratExtraBold,
   };
 
   // Helper function to build font array
