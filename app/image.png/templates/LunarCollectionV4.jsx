@@ -1,9 +1,9 @@
 export default function LunarCollectionOG({ params }) {
   const productImage =
     params.get("image") ||
-    "https://lunar-merch.b-cdn.net/rinalipa.shop/media/840/image.png";
+    //"https://lunar-merch.b-cdn.net/rinalipa.shop/media/840/image.png";
     "https://lunar-merch-2.b-cdn.net/papameat.shop/media/226/ssrco,classic_tee,mens_02,101010:01c5ca27c6,front,product_square,x600.jpg";
-    //"https://lunar-merch-2.b-cdn.net/hughlauriemerchandise.shop/media/917/image.png";
+    //"https://lunar-merch.b-cdn.net/hot.test.tdalunar.com/media/553/307_20251030_174757_mockup.jpg";
 
   const styleId = params.get("style") || "v1";
 
@@ -21,26 +21,19 @@ export default function LunarCollectionOG({ params }) {
 
     v2: {
       frameUrl:
-        "https://lunar-merch.b-cdn.net/hot.test.tdalunar.com/media/1145/37233511_fashion_8-(1)-(1).png",
-
-      productFrame: {
-        padding: 24,
-        borderRadius: 28,
-        backgroundColor: "#ffffff",
-        boxShadow: "0 18px 40px rgba(0,0,0,0.18)",
-      },
+        "https://lunar-merch.b-cdn.net/hot.test.tdalunar.com/media/1171/26992588_social_media_post_83_12-(3).png",
 
       product: {
-        x: 282.6,
-        y: 308.1,
-        width: 500.8,
-        height: 500.8,
+        x: 80.5,
+        y: 80.5,
+        width: 911.8,
+        height: 911.8,
       },
     },
 
     v3: {
       frameUrl:
-        "https://lunar-merch.b-cdn.net/hot.test.tdalunar.com/media/1148/New-Project-(9).png",
+        "https://lunar-merch.b-cdn.net/hot.test.tdalunar.com/media/1171/26992588_social_media_post_83_12-(3).png",
         product: {
           x: 32,
           y: 60.7,
@@ -50,7 +43,7 @@ export default function LunarCollectionOG({ params }) {
     },
     v4: {
       frameUrl:
-        "https://lunar-merch.b-cdn.net/hot.test.tdalunar.com/media/1156/edited_39248386_fashion_7.png",
+        "https://lunar-merch.b-cdn.net/hot.test.tdalunar.com/media/1166/edited_39248386_fashion_7-V1.png",
       product: {
         x: 233.6,
         y: 233.6,
@@ -60,7 +53,7 @@ export default function LunarCollectionOG({ params }) {
     },
     v5: {
       frameUrl:
-        "https://lunar-merch.b-cdn.net/hot.test.tdalunar.com/media/1149/37233493_fashion_3_2-_square.png",
+        "https://lunar-merch.b-cdn.net/hot.test.tdalunar.com/media/1165/edited_37233493_fashion_3_2V1.png",
       product: {
         x: 137,
         y: 127,
@@ -70,7 +63,7 @@ export default function LunarCollectionOG({ params }) {
     },
     v6: {
       frameUrl:
-        "https://lunar-merch.b-cdn.net/hot.test.tdalunar.com/media/1155/39524431_3g-(1).png",
+        "https://lunar-merch.b-cdn.net/hot.test.tdalunar.com/media/1170/edited_39524431_3g-(3).png",
       product: {
         x: 183,
             y: 131,
