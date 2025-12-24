@@ -7,9 +7,25 @@ export default function LunarBannerV4() {
   const image_2 = params.get("image_2") || "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400";
   const image_3 = params.get("image_3") || "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400";
   const image_4 = params.get("image_4") || "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400";
-  const title = params.get("title") || "COLD ONES";
-  const subtitle = params.get("subtitle") || "MERCHANDISE STORE";
-  const description = params.get("description") || "The Best Store of Cold Ones Merchandise";
+  const rawTitle = params.get("title") || "The Fighter and the Kid MERCHANDISE STORE";
+  let title = rawTitle;
+  let subtitle = "MERCHANDISE STORE";
+
+  if (rawTitle.toLowerCase().includes("merchandise store")) {
+      title = rawTitle.replace(/Merchandise Store/gi, "").trim();
+      subtitle = "MERCHANDISE STORE";
+  }
+
+  // Dynamic font size for title
+  let titleFontSize = 100; // Increased base size
+  if (title.length > 40) {
+    titleFontSize = 55;
+  } else if (title.length > 25) {
+    titleFontSize = 75;
+  } else if (title.length > 15) {
+    titleFontSize = 85;
+  }
+  const description = (params.get("description") || "The Best Store of Cold Ones Merchandise Store").replace(/Merchandise Store/g, "").trim();
   const shop_url = params.get("shop_url") || "coldonesshop.com";
 
   const containerWidth = 1920;
@@ -56,7 +72,7 @@ export default function LunarBannerV4() {
       >
 
         {/* Left Column: Product Images */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 40, alignItems: "flex-start" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 40, alignItems: "flex-start", width: 350 }}>
           
           {/* Tấm ảnh 1 */}
           <div style={{ 
@@ -96,7 +112,9 @@ export default function LunarBannerV4() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            width: 850,
+            flex: 1, // Allow dynamic width
+            maxWidth: 1000,
+            margin: "0 20px",
           }}
         >
           {/* Top Bubble: Title */}
@@ -104,15 +122,18 @@ export default function LunarBannerV4() {
             style={{
               display: "flex",
               backgroundColor: "black",
-              padding: "10px 60px",
-              borderTopLeftRadius: "60px",
-              borderTopRightRadius: "60px",
-              borderBottomLeftRadius: "15px",
-              borderBottomRightRadius: "15px",
+              padding: "25px 70px 45px 70px",
+              borderTopLeftRadius: "50px",
+              borderTopRightRadius: "50px",
+              borderBottomLeftRadius: "25px",
+              borderBottomRightRadius: "25px",
               zIndex: 2,
+              marginBottom: -35,
+              textAlign: "center",
+              justifyContent: "center",
             }}
           >
-            <span style={{ fontSize: 90, fontWeight: 900, color: "white", lineHeight: 1, textTransform: "uppercase" }}>
+            <span style={{ fontSize: titleFontSize, fontWeight: 900, color: "white", lineHeight: 0.9, textTransform: "uppercase", textAlign: "center" }}>
               {title}
             </span>
           </div>
@@ -122,14 +143,15 @@ export default function LunarBannerV4() {
             style={{
               display: "flex",
               backgroundColor: "black",
-              padding: "20px 50px",
-              borderRadius: "45px",
-              marginTop: "-15px",
+              padding: "15px 60px",
+              borderRadius: "50px",
               zIndex: 1,
               textAlign: "center",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
-            <span style={{ fontSize: 58, fontWeight: 900, color: "white", letterSpacing: 2, lineHeight: 1, textTransform: "uppercase" }}>
+            <span style={{ fontSize: 45, fontWeight: 900, color: "white", letterSpacing: 2, lineHeight: 1, textTransform: "uppercase" }}>
               {subtitle}
             </span>
           </div>

@@ -62,6 +62,10 @@ import LunarFeaturedProduct from './templates/lunar-featured-product';
 import LunarCollectionV3 from './templates/LunarCollectionV3';
 import LunarCollectionV4 from './templates/LunarCollectionV4';
 import LunarBannerV4 from './templates/LunarBannerV4';
+import LunarBannerV5 from './templates/LunarBannerV5';
+import LunarBannerV6 from './templates/LunarBannerV6';
+import LunarBannerV7 from './templates/LunarBannerV7';
+import LunarBannerV8 from './templates/LunarBannerV8';
 
 export const runtime = 'edge';
 
@@ -455,6 +459,30 @@ const TEMPLATE_CONFIG = {
     height: 730,
     fontType: 'montserratExtraBold',
   },
+  'lunar-banner-v5': {
+    component: LunarBannerV5,
+    width: 1920,
+    height: 730,
+    fontType: 'montserratExtraBold',
+  },
+  'lunar-banner-v6': {
+    component: LunarBannerV6,
+    width: 1920,
+    height: 730,
+    fontType: ['montserratExtraBold', 'greatVibes'],
+  },
+  'lunar-banner-v7': {
+    component: LunarBannerV7,
+    width: 1920,
+    height: 730,
+    fontType: 'montserratExtraBold',
+  },
+  'lunar-banner-v8': {
+    component: LunarBannerV8,
+    width: 1920,
+    height: 730,
+    fontType: 'montserratExtraBold',
+  },
 };
 
 export async function GET(request) {
@@ -466,7 +494,7 @@ export async function GET(request) {
     new URL('../../assets/fonts/BeVietnamPro-Medium.woff', import.meta.url)
   ).then(res => res.arrayBuffer());
 
-  const [, fontPacifico, fontRobotoSlab, fontLobster, fontMontserratExtraBold] = await Promise.all([
+  const [fontGreatVibes, fontPacifico, fontRobotoSlab, fontLobster, fontMontserratExtraBold] = await Promise.all([
     fetch(new URL('../../assets/fonts/GreatVibes-Regular.woff', import.meta.url)).then(res => res.arrayBuffer()),
     fetch(new URL('../../assets/fonts/Pacifico-Regular.woff', import.meta.url)).then(res => res.arrayBuffer()),
     fetch(new URL('../../assets/fonts/RobotoSlab-Regular.woff', import.meta.url)).then(res => res.arrayBuffer()),
@@ -478,6 +506,7 @@ export async function GET(request) {
   const fontMap = {
     'outfit': await loadGoogleFont('Outfit', 'FANS MERCH'),
     'beVietnam': fontBeVietnam,
+    'greatVibes': fontGreatVibes,
     'pacifico': fontPacifico,
     'robotoSlab': fontRobotoSlab,
     'lobster': fontLobster,
@@ -487,6 +516,23 @@ export async function GET(request) {
   // Helper function to build font array
   const buildFonts = (fontType, fontWeight = 400, fontStyle = 'normal') => {
     if (!fontType) return undefined;
+
+    if (Array.isArray(fontType)) {
+      return fontType.map(type => {
+        let name = 'font';
+        if (type === 'montserratExtraBold') name = 'Montserrat';
+        if (type === 'greatVibes') name = 'GreatVibes';
+        if (type === 'pacifico') name = 'Pacifico';
+        if (type === 'lobster') name = 'Lobster';
+        
+        return {
+          name: name,
+          data: fontMap[type],
+          weight: fontWeight,
+          style: fontStyle,
+        };
+      });
+    }
 
     if (fontType === 'outfit') {
       return [{
