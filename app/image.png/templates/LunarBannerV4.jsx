@@ -23,7 +23,9 @@ export default function LunarBannerV4({ params }) {
   } else if (title.length > 15) {
     titleFontSize = 85;
   }
-  const description = (params.get("description") || "The Best Store of Cold Ones Merchandise Store").replace(/Merchandise Store/g, "").trim();
+  const description = `The Best Store of ${rawTitle}`
+    .replace(/Merchandise Store/gi, "")
+    .trim();
   const shop_url = params.get("text_2") || "coldonesshop.com";
 
   const containerWidth = 1920;
