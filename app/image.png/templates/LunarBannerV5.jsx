@@ -1,9 +1,7 @@
-export default function LunarBannerV5() {
-  // 1. Lấy dữ liệu động từ URL params
-  const params = new URLSearchParams(typeof window !== "undefined" ? window.location.search : "");
+export default function LunarBannerV5({ params }) {
 
   // LẤY CÁC LINK ẢNH
-  const bg_image = params.get("bg_image") || "https://beatroutemedia.com/wp-content/uploads/2025/11/BR_Louis_Tomlinson_Hero.jpg";
+  const bg_image = params.get("bg_image") || "https://tda-sale-stuff.b-cdn.net/lunar/banner/banner-01.jpg";
 /*   const image_1 = params.get("image_1") || "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400";
   const image_2 = params.get("image_2") || "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400";
   const image_3 = params.get("image_3") || "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400";
@@ -14,7 +12,7 @@ export default function LunarBannerV5() {
   const image_3 = params.get("image_3") || "https://lunar-merch.b-cdn.net/hello.test.tdalunar.com/media/78/image.png";
   const image_4 = params.get("image_4") || "https://lunar-merch.b-cdn.net/hello.test.tdalunar.com/media/66/image.png";
 
-  const rawTitle = params.get("title") || "The Fighter Merchandise Store";
+  const rawTitle = params.get("text_1") || "The Fighter Merchandise Store";
   const title = `WELCOME TO ${rawTitle.replace(/^WELCOME TO\s+/i, "")}`;
   const words = title.split(" ");
   const half = Math.ceil(words.length / 2);
@@ -24,7 +22,7 @@ export default function LunarBannerV5() {
   const main_text_1 = params.get("main_text_1") || "NEW";
   const main_text_2 = params.get("main_text_2") || "ARRIVAL";
   const badge_text = params.get("badge_text") || "NEW COLLECTION";
-  const shop_url = params.get("shop_url") || "CAYLUSSTORE.COM";
+  const shop_url = params.get("text_2") || "CAYLUSSTORE.COM";
 
   const containerWidth = 1920;
   const containerHeight = 730;

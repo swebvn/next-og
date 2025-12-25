@@ -1,15 +1,13 @@
-export default function LunarBannerV6() {
-  const params = new URLSearchParams(typeof window !== "undefined" ? window.location.search : "");
-
+export default function LunarBannerV6({ params }) {
   // --- Dữ liệu ---
-  const bg_image = params.get("bg_image") || "https://beatroutemedia.com/wp-content/uploads/2025/11/BR_Louis_Tomlinson_Hero.jpg";
+  const bg_image = params.get("bg_image") || "https://tda-sale-stuff.b-cdn.net/lunar/banner/banner-01.jpg";
   
   const image_1 = params.get("image_1") || "https://lunar-merch.b-cdn.net/hello.test.tdalunar.com/media/46/image.png";
   const image_2 = params.get("image_2") || "https://lunar-merch.b-cdn.net/hello.test.tdalunar.com/media/35/image.png";
   const image_3 = params.get("image_3") || "https://lunar-merch.b-cdn.net/hello.test.tdalunar.com/media/78/image.png";
   const image_4 = params.get("image_4") || "https://lunar-merch.b-cdn.net/hello.test.tdalunar.com/media/66/image.png";
 
-  let rawTitle = params.get("title") || "The Fighter";
+  let rawTitle = params.get("text_1") || "The Fighter";
   // Remove "Store" if it ends with "Merchandise Store" (keep "Merchandise")
   rawTitle = rawTitle.replace(/Merchandise\s+Store$/i, "Merchandise");
   
@@ -18,7 +16,7 @@ export default function LunarBannerV6() {
   const main_text_1 = params.get("main_text_1") || "NEW";
   const main_text_2 = params.get("main_text_2") || "ARRIVAL";
   const badge_text = params.get("badge_text") || "Collection";
-  const shop_url = params.get("shop_url") || "thesmithsstore.com";
+  const shop_url = params.get("text_2") || "thesmithsstore.com";
 
   const containerWidth = 1920;
   const containerHeight = 730;

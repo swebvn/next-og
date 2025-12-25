@@ -1,13 +1,11 @@
-export default function LunarBannerV4() {
-  // 1. Lấy dữ liệu động từ URL params
-  const params = new URLSearchParams(typeof window !== "undefined" ? window.location.search : "");
+export default function LunarBannerV4({ params }) {
 
-  const bg_image = params.get("bg_image") || "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1920";
+  const bg_image = params.get("bg_image") || "https://tda-sale-stuff.b-cdn.net/lunar/banner/banner-01.jpg";
   const image_1 = params.get("image_1") || "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400";
   const image_2 = params.get("image_2") || "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400";
   const image_3 = params.get("image_3") || "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400";
   const image_4 = params.get("image_4") || "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400";
-  const rawTitle = params.get("title") || "The Fighter and the Kid MERCHANDISE STORE";
+  const rawTitle = params.get("text_1") || "The Fighter and the Kid MERCHANDISE STORE";
   let title = rawTitle;
   let subtitle = "MERCHANDISE STORE";
 
@@ -26,7 +24,7 @@ export default function LunarBannerV4() {
     titleFontSize = 85;
   }
   const description = (params.get("description") || "The Best Store of Cold Ones Merchandise Store").replace(/Merchandise Store/g, "").trim();
-  const shop_url = params.get("shop_url") || "coldonesshop.com";
+  const shop_url = params.get("text_2") || "coldonesshop.com";
 
   const containerWidth = 1920;
   const containerHeight = 730;
