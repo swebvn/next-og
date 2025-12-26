@@ -44,7 +44,7 @@ export default function LunarBannerV8({ params }) {
         height: containerHeight,
         position: "relative",
         overflow: "hidden",
-        background: "#050505",
+        background: "#000",
         fontFamily: "'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
         display: "flex",
         flexDirection: "column",
@@ -59,19 +59,21 @@ export default function LunarBannerV8({ params }) {
           width: containerWidth,
           height: containerHeight,
           objectFit: "cover",
-          opacity: 0.3,
-          filter: "grayscale(100%) contrast(1.2)", // Grayscale for Cyber look
+          opacity: 0.8,
+          zIndex: 0,
         }}
       />
       
-      {/* Grid Overlay Effect */}
-      <div style={{
+      {/* Overlay gradient */}
+      <div 
+        style={{
           position: "absolute",
-          top: 0, left: 0, width: "100%", height: "100%",
-          background: "rgba(255, 255, 255, 0.03)",
-          backgroundSize: "40px 40px",
-          zIndex: 1
-      }}/>
+          top: 0, left: 0, right: 0, bottom: 0,
+          background: "linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%)",
+          zIndex: 1,
+          display: "flex", 
+        }}
+      />
 
       {/* Main Content Layer */}
       <div
@@ -152,7 +154,7 @@ export default function LunarBannerV8({ params }) {
                 backgroundClip: "text",
                 WebkitBackgroundClip: "text",
                 color: "transparent",
-                lineHeight: 0.9, 
+                lineHeight: 1.1, 
                 textTransform: "uppercase", 
                 textAlign: "center",
                 letterSpacing: -2,

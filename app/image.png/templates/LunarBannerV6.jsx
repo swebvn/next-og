@@ -74,7 +74,7 @@ export default function LunarBannerV6({ params }) {
         {/* Image 1: Top Left - Portrait */}
         <div style={{
             position: "absolute",
-            top: 40, left: 60,
+            top: 10, left: 60,
             width: 340, height: 440,
             transform: "rotate(-2deg)",
             border: "12px solid white",
@@ -90,7 +90,7 @@ export default function LunarBannerV6({ params }) {
         {/* Image 2: Top Right - Portrait */}
         <div style={{
             position: "absolute",
-            top: 40, left: 440,
+            top: 10, left: 440,
             width: 340, height: 440,
             transform: "rotate(3deg)",
             border: "12px solid white",
@@ -106,7 +106,7 @@ export default function LunarBannerV6({ params }) {
         {/* Image 3: Bottom Left - Tilted Clockwise */}
         <div style={{
             position: "absolute",
-            bottom: 40, left: 120,
+            bottom: 30, left: 120,
             width: 300, height: 400,
             transform: "rotate(12deg)",
             border: "12px solid white",
@@ -122,7 +122,7 @@ export default function LunarBannerV6({ params }) {
         {/* Image 4: Bottom Right - Tilted Counter-Clockwise */}
         <div style={{
             position: "absolute",
-            bottom: 40, left: 520,
+            bottom: 30, left: 520,
             width: 300, height: 400,
             transform: "rotate(-12deg)",
             border: "12px solid white",
