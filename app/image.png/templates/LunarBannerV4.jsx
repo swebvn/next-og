@@ -1,6 +1,8 @@
+import { getRandomBgImage } from "./utils/bannerAssets";
+
 export default function LunarBannerV4({ params }) {
 
-  const bg_image = params.get("bg_image") || "https://tda-sale-stuff.b-cdn.net/lunar/banner/banner-01.jpg";
+  const bg_image = getRandomBgImage(params.get("bg_image"));
   const image_1 = params.get("image_1") || "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400";
   const image_2 = params.get("image_2") || "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400";
   const image_3 = params.get("image_3") || "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400";

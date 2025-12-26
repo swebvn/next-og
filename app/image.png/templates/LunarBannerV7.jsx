@@ -1,7 +1,8 @@
+import { getRandomBgImage } from "./utils/bannerAssets";
 export default function LunarBannerV7({ params }) {
 
   // LẤY CÁC LINK ẢNH
-  const bg_image = params.get("bg_image") || "https://tda-sale-stuff.b-cdn.net/lunar/banner/banner-01.jpg";
+  const bg_image = getRandomBgImage(params.get("bg_image"));
   
   const image_1 = params.get("image_1") || "https://lunar-merch.b-cdn.net/hello.test.tdalunar.com/media/46/image.png";
   const image_2 = params.get("image_2") || "https://lunar-merch.b-cdn.net/hello.test.tdalunar.com/media/35/image.png";
