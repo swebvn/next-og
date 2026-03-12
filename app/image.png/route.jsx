@@ -66,7 +66,7 @@ import LunarBannerV5 from './templates/LunarBannerV5';
 import LunarBannerV6 from './templates/LunarBannerV6';
 import LunarBannerV7 from './templates/LunarBannerV7';
 import LunarBannerV8 from './templates/LunarBannerV8';
-
+import TemplateBrick from './templates/template-brick';
 export const runtime = 'edge';
 
 async function loadGoogleFont (font, text) {
@@ -481,6 +481,12 @@ const TEMPLATE_CONFIG = {
     component: LunarBannerV8,
     width: 1920,
     height: 730,
+    fontType: 'montserratExtraBold',
+  },
+  'template-brick': {
+    component: TemplateBrick,
+    width: 1200,
+    height: 1200,
     fontType: 'montserratExtraBold',
   },
 };
