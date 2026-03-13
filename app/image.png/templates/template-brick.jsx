@@ -4,8 +4,8 @@ export default function TemplateBrick({ params }) {
 
   const websiteConfigs = {
     decool: {
-      background: '',
-      watermark: { text: 'decool.store', color: '#CECED0' },
+      background: 'https://lunar-merch-dev.b-cdn.net/background%20bricks/decool.png',
+      watermark: { text: '', color: '#CECED0' },
       positions: {
         logo_brand: { x: 10, y: 10, width: 360, height: 120 },
         sku: { x: 35, y: 170 },
@@ -22,7 +22,7 @@ export default function TemplateBrick({ params }) {
       }
     },
     lepingermany: {
-      background: '',
+      background: 'https://lunar-merch-dev.b-cdn.net/background%20bricks/lepingermany.png',
       watermark: { text: 'lepingermany.com', color: '#B0D4EC' },
       positions: {
         logo_brand: { x: 15, y: 1075, width: 350, height: 110 },
@@ -40,7 +40,7 @@ export default function TemplateBrick({ params }) {
       }
     },
     kaziblock: {
-      background: '',
+      background: 'https://lunar-merch-dev.b-cdn.net/background%20bricks/kaziblock.png',
       watermark: { text: 'kaziblock.com', color: 'rgba(51, 51, 51, 0.5)' },
       positions: {
         logo_brand: { x: 15, y: 1050, width: 360, height: 120 },
@@ -58,14 +58,14 @@ export default function TemplateBrick({ params }) {
       }
     },
     wange: {
-      background: '',
+      background: 'https://lunar-merch-dev.b-cdn.net/background%20bricks/wange.png',
       watermark: { text: 'wange.store', color: 'rgba(90, 1, 0, 0.5)' },
       positions: {
         logo_brand: { x: 840, y: 0, width: 360, height: 120 },
-        sku: { x: 75, y: 340 },
+        sku: { x: 75, y: 330 },
         title: { x: 50, y: 165 },
-        age: { x: 75, y: 528 },
-        pcs: { x: 75, y: 435 },
+        age: { x: 75, y: 490 },
+        pcs: { x: 75, y: 410 },
         product_image: { x: 525, y: 600, width: 655, height: 600 }
       },
       fonts: {
@@ -76,14 +76,14 @@ export default function TemplateBrick({ params }) {
       }
     }, 
     mocbrickland: {
-      background: '',
+      background: 'https://lunar-merch-dev.b-cdn.net/background%20bricks/mocbrickland.png',
       watermark: { text: 'mocbrickland.com', color: 'rgba(255, 255, 255, 0.5)' },
       positions: {
         logo_brand: { x: 820, y: 1060, width: 360, height: 120 },
-        sku: { x: 140, y: 540 },
+        sku: { x: 150, y: 540 },
         title: { x: 30, y: 140 },
-        age: { x: 140, y: 430 },
-        pcs: { x: 140, y: 680 },
+        age: { x: 150, y: 430 },
+        pcs: { x: 150, y: 680 },
         product_image: { x: 525, y: 480, width: 655, height: 600 }
       },
       fonts: {
@@ -94,14 +94,14 @@ export default function TemplateBrick({ params }) {
       }
     },
     mouldkingblock: {
-      background: '',
-      watermark: { text: 'mouldkingblock.com', color: 'rgba(51, 51, 51, 0.3)' },
+      background: 'https://lunar-merch-dev.b-cdn.net/background%20bricks/mouldkingblock.png',
+      watermark: { text: '', color: 'rgba(51, 51, 51, 0.3)' },
       positions: {
         logo_brand: { x: 10, y: 1070, width: 360, height: 120 },
         sku: { x: 135, y: 460 },
         title: { x: 50, y: 130 },
-        age: { x: 125, y: 343 },
-        pcs: { x: 125, y: 575 },
+        age: { x: 125, y: 348 },
+        pcs: { x: 125, y: 580 },
         product_image: { x: 450, y: 460, width: 655, height: 560 }
       },
       fonts: {
@@ -112,8 +112,8 @@ export default function TemplateBrick({ params }) {
       }
     },
     mouldkingstore: {
-      background: '',
-      watermark: { text: 'mouldking.store', color: 'rgb(255, 255, 255, 0.5)' },
+      background: 'https://lunar-merch-dev.b-cdn.net/background%20bricks/mouldking.png',
+      watermark: { text: '', color: 'rgb(255, 255, 255, 0.5)' },
       positions: {
         logo_brand: { x: 15, y: 1050, width: 360, height: 120 },
         sku: { x: 68, y: 439 },
@@ -130,7 +130,7 @@ export default function TemplateBrick({ params }) {
       }
     },
     lepinland: {
-      background: '',
+      background: 'https://lunar-merch-dev.b-cdn.net/background%20bricks/lepinland.png',
       watermark: { text: 'lepinland.com', color: 'rgba(0, 0, 0, 0.3)' },
       positions: {
         logo_brand: { x: 15, y: 1050, width: 360, height: 120 },
@@ -148,14 +148,14 @@ export default function TemplateBrick({ params }) {
       }
     },
     mocfactory: {
-      background: '',
+      background: 'https://lunar-merch-dev.b-cdn.net/background%20bricks/mocfactory.png',
       watermark: { text: 'mocfactory.com', color: '#C4A656' },
       positions: {
         logo_brand: { x: 15, y: 1050, width: 360, height: 120 },
-        sku: { x: 40, y: 370 },
-        title: { x: 40, y: 90 },
-        age: { x: 40, y: 515 },
-        pcs: { x: 40, y: 445 },
+        sku: { x: 50, y: 370 },
+        title: { x: 50, y: 110 },
+        age: { x: 50, y: 525 },
+        pcs: { x: 50, y: 450 },
         product_image: { x: 465, y: 490, width: 655, height: 600 }
       },
       fonts: {
@@ -171,7 +171,7 @@ export default function TemplateBrick({ params }) {
 
   // Get dynamic content
   const bg_image = params.get('bg_image') || config.background;
-  const product_image = params.get('product_image');
+  const product_image = params.get('product_image') ? 'https://remove-bg.tdagroup.online/' + params.get('product_image') : null;
   const title = params.get('title') || '';
   const sku = params.get('sku');
   const pcs = params.get('pcs');
