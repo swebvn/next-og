@@ -172,7 +172,8 @@ export default function TemplateBrick({ params }) {
   // Get dynamic content
   const bg_image = config.background;
   const product_image_origin = params.get('product_image');
-  const product_image = 'https://remove-bg.tdagroup.online/' + product_image_origin.replace(/^https?:\/\//, '') + '?driver=rembg';
+  const product_image_stripped = product_image_origin.replace(/^https?:\/\//, '');
+  const product_image = 'https://remove-bg.tdagroup.online/' + product_image_stripped + (product_image_stripped.includes('?') ? '&' : '?') + 'driver=rembg';
   const title = params.get('title') || '';
   const sku = params.get('sku');
   const pcs = params.get('pcs');
