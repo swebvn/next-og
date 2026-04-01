@@ -74,7 +74,7 @@ export default function TemplateBrick({ params }) {
         age: { family: 'Montserrat-Black.ttf', color: '#512829', size: 42, fontweight: 900 },
         pcs: { family: 'Montserrat-Black.ttf', color: '#512829', size: 42, fontweight: 900 }
       }
-    }, 
+    },
     mocbrickland: {
       background: 'https://lunar-merch-dev.b-cdn.net/background%20bricks/mocbrickland.png',
       watermark: { text: 'mocbrickland.com', color: 'rgba(255, 255, 255, 0.5)' },
@@ -121,7 +121,7 @@ export default function TemplateBrick({ params }) {
         age: { x: 68, y: 527 },
         pcs: { x: 68, y: 365 },
         product_image: { x: 440, y: 470, width: 655, height: 600 }
-      },  
+      },
       fonts: {
         title: { family: 'Montserrat-Black.ttf', color: '#fff', size: 70, fontweight: 900 },
         sku: { family: 'Montserrat-Black.ttf', color: '#333', size: 42, fontweight: 900 },
@@ -170,7 +170,7 @@ export default function TemplateBrick({ params }) {
   const config = websiteConfigs[website] || websiteConfigs.decool;
 
   // Get dynamic content
-  const bg_image = params.get('bg_image') || config.background;
+  const bg_image = config.background;
   const product_image = params.get('product_image') ? 'https://remove-bg.tdagroup.online/' + params.get('product_image') : null;
   const title = params.get('title') || '';
   const sku = params.get('sku');
