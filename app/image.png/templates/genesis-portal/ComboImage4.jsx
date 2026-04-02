@@ -7,7 +7,10 @@ export default function ComboImage4({ params }) {
         .split(",")
         .map(url => {
           const cleanUrl = url.replace(/^https?:\/\//, "");
-          return `https://remove-bg.tdagroup.online/${cleanUrl}`;
+          //return `https://remove-bg.tdagroup.online/${cleanUrl}`;
+          return `https://remove-bg.tdagroup.online/${cleanUrl}${
+            cleanUrl.includes("?") ? "&" : "?"
+          }driver=rembg`;
         })
     : [
         "https://remove-bg.tdagroup.online/aihkfac.skymage.net/v1/genesis-portal.b-cdn.net/media/4683/01K6TJZA35M2SJS697NH93DJXC.jpg?w=500",
